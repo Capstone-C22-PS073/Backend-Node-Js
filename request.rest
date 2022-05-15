@@ -1,0 +1,56 @@
+## Endpoint Toursight API ##
+
+# VIEW ALL USERS
+GET http://localhost:5000/api/users
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MjU4ODI1MCwiZXhwIjoxNjUyNjc0NjUwfQ.imHYv-FpBDhNKRjOl4hJc7RqFBqVZErESGF7fXsWfUU
+###
+
+
+# REGISTER
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "username": "user2",
+    "email": "user2@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678"
+}
+###
+
+# LOGIN 
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email": "user1@gmail.com",
+    "password": "12345678"
+}
+###
+
+# REFRESH TOKEN
+GET http://localhost:5000/api/token
+###
+
+# LOGOUT
+DELETE http://localhost:5000/api/logout
+###
+
+# RESOURCE ALL LANDMARK
+GET http://localhost:5000/api/landmark
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MjU5MTI5MSwiZXhwIjoxNjUyNTkxMzUxfQ.upkKsfoQHQ20pXPDyUSJQIRCNuYcccfwhxYT8A71qGE
+###
+
+# RESOURCE LANDMARK BY ID
+GET http://localhost:5000/api/landmark/3
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MjU5MjI3MywiZXhwIjoxNjUyNTkyMzMzfQ.9aWtPz9f8iujz-2oZjrMEb9bDeZOGawBW8dNxl5yteI
+###
+
+# LIHAT GAMBAR CONTOH /images\\namafile.jpg di postman
+GET http://localhost:5000/images\\tugujogja.jpg
+###
+
+###
+GET http://localhost:5000/D:File/PembelajaranSemester 6/Bangkit/Capstone/PROJECT/Backend-Node-Js/dummyimages/monas.jpg
+
+D:File PembelajaranSemester 6BangkitCapstonePROJECTBackend-Node-Jsdummyimagesmonas.jpg

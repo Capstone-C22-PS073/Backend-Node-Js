@@ -1,0 +1,52 @@
+import express from 'express';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import routes from './routes/index.js';
+import db from './config/database.js';
+import Users from './models/user-model.js';
+import Landmark from './models/landmark-model.js';
+
+dotenv.config();
+
+
+const app = express();
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(cors());
+app.use(cookieParser());
+
+// Connect to database
+try {
+    await db.authenticate();
+    console.log('Connected to Database MySQL');
+    await Users.sync(); // tabel Users
+    await Landmark.sync(); // tabel landmark
+
+} catch (err) {
+    console.log(err);
+}
+
+
+
+// Endpoint
+app.get('/', function(err,res){
+    res.status(200).send('Welcome to Toursight Restful API');
+})
+
+app.use(`/api`, routes);
+
+// static Image folder
+app.use('/images', express.static('./images'));
+
+
+// set HOST and PORT
+const HOST = process.env.HOST || 'localhost';
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, HOST, () => {
+    console.log(`Server running at http://${HOST}:${PORT}`);
+});
+

@@ -1,0 +1,12 @@
+#digunakan untuk login 
+/api/v1/login
+
+#digunakan untuk register 
+/api/v1/register
+
+#akses get landmark by models
+/api/v1/landmark
+
+
+
+/api/v1/dashboard
