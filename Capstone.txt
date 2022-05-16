@@ -1,0 +1,25 @@
+*flowcharts sementara
+start -> have an account no -> register
+                         yes-> login -> dashboard -> camera -> imageprocessing -> landmark detail
+                                                  -> landmark content -> landmark detail
+
+
+*cloud model
+training model (train, save the model) -> cloud storage (trained model) -> compute engine (restapi image classification) -> database mysql 
+                                                                                                                  ->               <-
+                                                                                                                      Android App
+
+
+Cloud Documentation
+-creating firewalls for external ip and access
+ create external ip that will be used by vm instances
+-prepare a compute engine instances
+ create compute engine instance and prepare dependencies that will be needed in project
+-deploy the apps
+ deploy node js application in compute eninge, which will process all parameters in the application
+-Integrating to mysql database
+ integrate the app with database to store show data and store data.
+
+
+
+slidesgo presentation

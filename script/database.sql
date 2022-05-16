@@ -1,5 +1,5 @@
 -- Database : 'toursight'
-CREATE DATABASE toursight;
+CREATE DATABASE IF NOT EXISTS toursight;
 
 USE toursight;
 
@@ -31,7 +31,7 @@ PRIMARY KEY (`id_landmark`)) ENGINE=InnoDB;
 CREATE TABLE IF NOT EXISTS `img` (
 `id` INTEGER NOT NULL AUTO_INCREMENT,
 `name` VARCHAR(100),
-`img` TEXT, 
+`src` TEXT, 
 PRIMARY KEY (id)) ENGINE=InnoDB;
 
 

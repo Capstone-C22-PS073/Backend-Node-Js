@@ -2,9 +2,8 @@
 
 # VIEW ALL USERS
 GET http://localhost:5000/api/users
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MjU4ODI1MCwiZXhwIjoxNjUyNjc0NjUwfQ.imHYv-FpBDhNKRjOl4hJc7RqFBqVZErESGF7fXsWfUU
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjIiLCJlbWFpbCI6InVzZXIyQGdtYWlsLmNvbSIsImlhdCI6MTY1MjYyMzEwNywiZXhwIjoxNjUyNjIzMTY3fQ.kCnb2kgvxp-JqFYdpPA_NkfQ2DSuxOnih3fAm8KkYZk
 ###
-
 
 # REGISTER
 POST http://localhost:5000/api/users
@@ -13,8 +12,7 @@ Content-Type: application/json
 {
     "username": "user2",
     "email": "user2@gmail.com",
-    "password": "12345678",
-    "confPassword": "12345678"
+    "password": "12345678"
 }
 ###
 
@@ -23,7 +21,7 @@ POST http://localhost:5000/api/login
 Content-Type: application/json
 
 {
-    "email": "user1@gmail.com",
+    "email": "user2@gmail.com",
     "password": "12345678"
 }
 ###
@@ -38,19 +36,14 @@ DELETE http://localhost:5000/api/logout
 
 # RESOURCE ALL LANDMARK
 GET http://localhost:5000/api/landmark
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MjU5MTI5MSwiZXhwIjoxNjUyNTkxMzUxfQ.upkKsfoQHQ20pXPDyUSJQIRCNuYcccfwhxYT8A71qGE
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjIiLCJlbWFpbCI6InVzZXIyQGdtYWlsLmNvbSIsImlhdCI6MTY1MjY5NDk0MCwiZXhwIjoxNjUyNjk1MDAwfQ.M7unvmVJ1ipp6_ePHHdbNXtiOJmfzbR0ljeain0iN5Q
 ###
 
 # RESOURCE LANDMARK BY ID
-GET http://localhost:5000/api/landmark/3
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MjU5MjI3MywiZXhwIjoxNjUyNTkyMzMzfQ.9aWtPz9f8iujz-2oZjrMEb9bDeZOGawBW8dNxl5yteI
+GET http://localhost:5000/api/landmark/1
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjIiLCJlbWFpbCI6InVzZXIyQGdtYWlsLmNvbSIsImlhdCI6MTY1MjYzMDAyNywiZXhwIjoxNjUyNjMwMDg3fQ.FMEjjrfQlfzvTh1UXFx2ak3sW-Sib7yYpA3aGp2oBzo
 ###
 
 # LIHAT GAMBAR CONTOH /images\\namafile.jpg di postman
 GET http://localhost:5000/images\\tugujogja.jpg
 ###
-
-###
-GET http://localhost:5000/D:File/PembelajaranSemester 6/Bangkit/Capstone/PROJECT/Backend-Node-Js/dummyimages/monas.jpg
-
-D:File PembelajaranSemester 6BangkitCapstonePROJECTBackend-Node-Jsdummyimagesmonas.jpg
