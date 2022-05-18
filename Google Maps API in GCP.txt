@@ -1,0 +1,16 @@
+Location-Based Service Google Maps API:
+1. Create a Project GCP for Google Maps API
+2. Click Menu Dashboard Api Service, then Enable Api and Service
+3. Click Maps SDK for Android, then enable the Maps SDK for Android
+4. Click add a credential, then clik API
+5. Copy API Key for Google Maps API
+6. Click Edit icon for change restrictions
+7. in Application Restrictions, click Android Apps
+8. in Restrict usage to your Android apps, click add an item
+9. fill in the package name according to the android package where the google maps api is located
+10. fill In SHA-1 certificate fingerprint according to file google_mapps.api.xml from android studio and copy the SHA-1 certificate fingerprint
+from android studio then paste the code in GCP,and last click done
+11. in API restrictions choose Don't restrict key
+12. Click Save
+
+Source : https://www.youtube.com/watch?v=DKmM3i6qdYk&ab_channel=EgiaRosiSubhiyakto
