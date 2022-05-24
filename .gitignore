@@ -1,5 +1,4 @@
 node_modules
-
-package-lock.json
-
 keras_models/*
+upload/predict-image.jpg
+package-lock.json
