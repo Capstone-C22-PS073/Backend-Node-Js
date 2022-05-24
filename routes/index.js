@@ -15,7 +15,7 @@ router.post('/users', Register);
 router.post('/login', Login);
 router.get('/token', refreshToken);
 router.get('/users', verifyToken, getUsers);
-router.delete('/logout', Logout);
+router.delete('/logout', verifyToken, Logout);
 
 
 // Upload Dummy Data
