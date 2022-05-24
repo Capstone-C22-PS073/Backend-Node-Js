@@ -15,20 +15,29 @@ export const getUsers = async(req, res) => {
 }
 
 export const Register = async(req, res) => {
-    const { username, email, password, confPassword} = req.body;
+    const { username, email, password } = req.body;
     // if(password !== confPassword) return res.status(400).json({msg: "Password tidak sama dengan confirm password"});
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);
+    const usernameExists = await Users.findOne({
+        where:{
+            username: username 
+        }
+    })
     const emailExists = await Users.findOne({
         where:{
-            email: req.body.email
+            email: email
         }
     });
 
     try{
+        if( usernameExists ){
+            res.status(409).json("Username is already used");
+        }
         if( emailExists ){
             res.status(409).json("Email is already registered");
         }
+
         await Users.create({
             username: username,
             email: email,
@@ -55,7 +64,7 @@ export const Login = async(req,res) => {
         const username = user[0].username;
         const email = user[0].email;
         const accessToken = jwt.sign({userId, username, email}, process.env.ACCESS_TOKEN_SECRET, {
-            expiresIn: '300s'
+            expiresIn: '600s'
         });
         const refreshToken = jwt.sign({userId, username, email}, process.env.REFRESH_TOKEN_SECRET, {
             expiresIn: '1d'

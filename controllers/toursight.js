@@ -47,6 +47,18 @@ export const searchToursightByName = async(req, res) => {
         }
     );
     res.json(toursight);
-    // `SELECT * FROM toursight WHERE name LIKE '%` + search + `%' LIMIT 1;` //cari 1 data
+}
+
+
+export const getDataByClassName = async(req, res) => {
+    const getData = req.query.classname;
+    const toursight = await db.query(
+        `SELECT * FROM toursight WHERE name LIKE '%` + getData + `%' LIMIT 1;`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
+        }
+    );
+    res.json(toursight);
 }
 

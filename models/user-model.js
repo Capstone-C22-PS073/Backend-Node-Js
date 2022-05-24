@@ -10,7 +10,8 @@ const Users = db.define('users', {
        type: DataTypes.INTEGER
     },
     username:{
-        type: DataTypes.STRING(20)
+        type: DataTypes.STRING(20),
+        unique: true
     },
     email:{
         type: DataTypes.STRING(100),
