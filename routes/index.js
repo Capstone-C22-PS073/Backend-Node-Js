@@ -2,9 +2,10 @@ import { Router } from 'express';
 import { getUsers, Login, Register, Logout } from '../controllers/users.js';
 import { verifyToken } from '../middlewares/VerifyToken.js';
 import { refreshToken } from '../controllers/refreshToken.js';
-import { addLandmark, getAllLandmark, getLandmarkByid } from '../controllers/landmark.js';
+import { addToursight, getAllToursight, getToursightByid, searchToursightByName } from '../controllers/toursight.js';
 import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
-// import { classifyImage } from '../controllers/predict.js';
+import { getInfoByImg } from '../controllers/predict.js';
+
 
 
 const router = Router();
@@ -18,15 +19,23 @@ router.delete('/logout', Logout);
 
 
 // Upload Dummy Data
-router.post('/landmark', uploadImg, addLandmark);
-
+router.post('/dummy', uploadImg, addToursight);
 
 
 // Resource User
-router.get('/landmark', verifyToken, getAllLandmark);
-router.get('/landmark/:id', verifyToken, getLandmarkByid);
+router.get('/toursight', verifyToken, getAllToursight);
+router.get('/toursight/:id', verifyToken, getToursightByid);
+router.get('/search', verifyToken, searchToursightByName);
+
 // Upload Image to procces image recognition
-// router.post('/upload', uploadLoader, classifyImage);
+router.post('/upload', uploadLoader, (req, res) => {
+    const image = req.file;
+    res.json({
+        message: 'Upload Success',
+        result: image
+    });
+});
+router.post('/predict', getInfoByImg);
 
 export default router;
 

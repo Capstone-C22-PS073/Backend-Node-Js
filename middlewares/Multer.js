@@ -32,7 +32,7 @@ export const uploadStorage = multer.diskStorage({
       cb(null, './upload');
    },
    filename: function (req, file, cb) {
-      cb(null, file.originalname);
+      cb(null, 'predict-image.jpg');
    }
 });
 

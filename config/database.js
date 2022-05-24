@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize';
 
-const database = `toursight`;
+const database = `toursight_database`;
 const user = 'root';
 const password = '';
 

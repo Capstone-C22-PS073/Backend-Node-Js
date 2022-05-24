@@ -6,7 +6,7 @@ import cors from 'cors';
 import routes from './routes/index.js';
 import db from './config/database.js';
 import Users from './models/user-model.js';
-import Landmark from './models/landmark-model.js';
+import Toursight from './models/toursight-model.js';
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ try {
     await db.authenticate();
     console.log('Connected to Database MySQL');
     await Users.sync(); // tabel Users
-    await Landmark.sync(); // tabel landmark
+    await Toursight.sync(); // tabel Toursight
 
 } catch (err) {
     console.log(err);

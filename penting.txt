@@ -1,3 +1,0 @@
-images disimpan di bucket
-
-update dummy data menggunakan image di bucket

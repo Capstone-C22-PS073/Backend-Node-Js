@@ -10,7 +10,7 @@ create database first on xampp (local)
 1. turn on XAMPP
 2. start apache and MySQL
 3. click on MySQL admin or go to http://localhost/phpmyadmin/
-4. go to database and create database with "toursight" name
+4. go to database and create database with "toursight_database" name
 5. run the script database on phpmyadmin or just run the backend will automatic migrate tabel
 
 How to run backend in local / development:
