@@ -1,14 +1,27 @@
 import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
 
-const database = process.env.CLOUDSQLDATABASE | `toursight_database`;
-const user = process.env.CLOUDSQLUSER | 'root';
-const password = process.env.CLOUDSQLPASSWORD | '';
-const host = process.env.CLOUDSQLHOST | 'localhost';
+dotenv.config();
+
+
+let database;
+let user;
+let password;
+let host;  
+
+database = 'toursight_database' ;
+user = 'root';
+password = '';  // password untuk server: 'rootpassword'
+host = 'localhost'; // host server db: '34.101.186.29'
 
 const db = new Sequelize (database, user, password,{
     host: host,
     dialect: 'mysql'
 });
 
-
 export default db;
+
+
+
+
+
