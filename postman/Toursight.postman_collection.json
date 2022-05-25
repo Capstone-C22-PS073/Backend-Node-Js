@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "b213f42b-f6db-47af-a384-3918805229e1",
+		"name": "Toursight",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19874365"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "user1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Toursight",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/toursight",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"toursight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Toursight By Name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/search?keyword=monumen nasional",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "monumen nasional"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/category?category=monumen",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "monumen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Data Classname",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/getdatabyimg?classname=monumen nasional",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getdatabyimg"
+					],
+					"query": [
+						{
+							"key": "classname",
+							"value": "monumen nasional"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/File Pembelajaran/Semester 6/Bangkit/Capstone/PROJECT/Repository/Backend-Node-Js/images/monas.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/upload",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/logout",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQwNzM1NCwiZXhwIjoxNjUzNDA3OTU0fQ.D3bLss0ag69w1B6TPKpkZGHgpZqt0ywe46cIbmimvhA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "34.101.235.147:8080/api",
+			"type": "string"
+		}
+	]
+}
