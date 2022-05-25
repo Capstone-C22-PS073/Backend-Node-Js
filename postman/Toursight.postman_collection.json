@@ -121,6 +121,30 @@
 			"response": []
 		},
 		{
+			"name": "Get Toursight By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://34.101.235.147:8080/api/toursight/1",
+					"protocol": "http",
+					"host": [
+						"34",
+						"101",
+						"235",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"toursight",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Search Toursight By Name",
 			"request": {
 				"auth": {
