@@ -49,7 +49,6 @@ export const searchToursightByName = async(req, res) => {
     res.json(toursight);
 }
 
-
 export const getDataByClassName = async(req, res) => {
     const getData = req.query.classname;
     const toursight = await db.query(
@@ -62,3 +61,15 @@ export const getDataByClassName = async(req, res) => {
     res.json(toursight);
 }
 
+export const getDataByCategory = async(req, res ) => {
+    const category = req.query.category
+
+    const toursight = await db.query(
+        `SELECT * FROM toursight WHERE category LIKE '%` + category + `%';`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
+        }
+    )
+    res.json(toursight);
+}

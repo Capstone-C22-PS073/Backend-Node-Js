@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { getUsers, Login, Register, Logout } from '../controllers/users.js';
 import { verifyToken } from '../middlewares/VerifyToken.js';
 import { refreshToken } from '../controllers/refreshToken.js';
-import { addToursight, getAllToursight, getDataByClassName, getToursightByid, searchToursightByName } from '../controllers/toursight.js';
+import { addToursight, getAllToursight, getDataByCategory, getDataByClassName, getToursightByid, searchToursightByName } from '../controllers/toursight.js';
 import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
 // import { getInfoByImg } from '../controllers/predict.js';
 
@@ -26,8 +26,8 @@ router.post('/dummy', uploadImg, addToursight);
 router.get('/toursight', verifyToken, getAllToursight); //homepage setelah login tampilkan toursight
 router.get('/toursight/:id', verifyToken, getToursightByid); // menampilkan data berdasarkan id
 router.get('/search', verifyToken, searchToursightByName); // search toursight berdasarkan nama
-router.get('/getdatabyimg', verifyToken, getDataByClassName) //search dengan menampilkan satu data dari classname
-
+router.get('/getdatabyimg', verifyToken, getDataByClassName); //search dengan menampilkan satu data dari classname
+router.get('/category', verifyToken, getDataByCategory);
 // Upload Image untuk temporary image recognition
 router.post('/upload', verifyToken, uploadLoader, (req, res) => {
     const image = req.file;
