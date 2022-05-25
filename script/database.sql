@@ -1,6 +1,10 @@
 -- Database : 'toursight_database'
 CREATE DATABASE IF NOT EXISTS toursight_database;
 
+-- CREATE USER 'mysql_user'@'localhost' IDENTIFIED BY 'tsdatabase';
+-- GRANT ALL ON toursight_database.* to 'mysql_user'@'localhost';
+-- FLUSH PRIVILEGES;
+
 USE toursight_database;
 
 -- CREATE TABEL
