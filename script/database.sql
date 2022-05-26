@@ -27,6 +27,13 @@ CREATE TABLE IF NOT EXISTS `toursight` (
 `deskripsi` TEXT, 
 PRIMARY KEY (`id`)) ENGINE=InnoDB;
 
+CREATE TABLE IF NOT EXISTS `user_image` (
+`id` INTEGER NOT NULL auto_increment , 
+`username` VARCHAR(255), 
+`image` VARCHAR(300) NOT NULL, 
+`createdAt` DATE, 
+`updatedAt` DATE, 
+PRIMARY KEY (`id`)) ENGINE=InnoDB;
 
 --  Dummy Data
 INSERT INTO `toursight` (`id`, `name`, `location`, `category`, `image`, `deskripsi`) VALUES

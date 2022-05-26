@@ -36,9 +36,7 @@ export const getImageByid = async(req, res) => {
 
 export const getAllImgByUser = async(req, res) => {
     try{
-        const image = await Images.findAll({
-            attributes: ["id", "image"]
-        });
+        const image = await Images.findAll();
         res.json(image);
     } catch (err) {
         console.log(err);

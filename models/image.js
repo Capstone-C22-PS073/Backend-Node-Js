@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize';
 import db from '../config/database.js';
+import Users from './user-model.js';
 
 
 const Images = db.define('user_image', {
@@ -10,10 +11,17 @@ const Images = db.define('user_image', {
        type: DataTypes.INTEGER
     },
     image:{
-        type: DataTypes.STRING(200),
+        type: DataTypes.STRING(300),
         allowNull: false
     },
-
+    createdAt:{
+        type: DataTypes.DATEONLY,
+        defaultValue: DataTypes.NOW
+    },
+    updatedAt:{
+        type: DataTypes.DATEONLY,
+        defaultValue: DataTypes.NOW
+    }
 }, {
     freezeTableName: true,
     timestamps: false
