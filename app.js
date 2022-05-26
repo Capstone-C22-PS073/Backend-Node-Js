@@ -7,6 +7,7 @@ import routes from './routes/index.js';
 import db from './config/database.js';
 import Users from './models/user-model.js';
 import Toursight from './models/toursight-model.js';
+import Images from './models/image.js';
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ try {
     console.log('Connected to Database MySQL');
     await Users.sync(); // tabel Users
     await Toursight.sync(); // tabel Toursight
+    await Images.sync();
 
 } catch (err) {
     console.log(err);
