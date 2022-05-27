@@ -32,9 +32,9 @@
 					]
 				},
 				"url": {
-					"raw": "{{lokal}}/users",
+					"raw": "{{server}}/users",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"users"
@@ -64,9 +64,9 @@
 					]
 				},
 				"url": {
-					"raw": "{{lokal}}/login",
+					"raw": "{{server}}/login",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"login"
@@ -83,7 +83,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MjkzMywiZXhwIjoxNjUzNTg0MTMzfQ.sOr2D8cKhubxXR3zxLajv_9BN6MsdwxwTnDFp80J3gs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0NCwiZXhwIjoxNjUzNjE2NDQ0fQ.6xz-FwBGK7FbJ-Q3WPaaHeW-F2d_DMJNHiVt47w7Auk",
 							"type": "string"
 						}
 					]
@@ -91,9 +91,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/toursight",
+					"raw": "{{server}}/toursight",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"toursight"
@@ -110,7 +110,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0NCwiZXhwIjoxNjUzNjE2NDQ0fQ.6xz-FwBGK7FbJ-Q3WPaaHeW-F2d_DMJNHiVt47w7Auk",
 							"type": "string"
 						}
 					]
@@ -118,9 +118,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/toursight/1",
+					"raw": "{{server}}/toursight/1",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"toursight",
@@ -138,7 +138,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0NCwiZXhwIjoxNjUzNjE2NDQ0fQ.6xz-FwBGK7FbJ-Q3WPaaHeW-F2d_DMJNHiVt47w7Auk",
 							"type": "string"
 						}
 					]
@@ -146,9 +146,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/search?keyword=monumen nasional",
+					"raw": "{{server}}/search?keyword=masjid",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"search"
@@ -156,7 +156,7 @@
 					"query": [
 						{
 							"key": "keyword",
-							"value": "monumen nasional"
+							"value": "masjid"
 						}
 					]
 				}
@@ -171,7 +171,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0NCwiZXhwIjoxNjUzNjE2NDQ0fQ.6xz-FwBGK7FbJ-Q3WPaaHeW-F2d_DMJNHiVt47w7Auk",
 							"type": "string"
 						}
 					]
@@ -179,9 +179,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/category?category=makanan",
+					"raw": "{{server}}/category?category=makanan",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"category"
@@ -204,7 +204,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MjkzMywiZXhwIjoxNjUzNTg0MTMzfQ.sOr2D8cKhubxXR3zxLajv_9BN6MsdwxwTnDFp80J3gs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0NCwiZXhwIjoxNjUzNjE2NDQ0fQ.6xz-FwBGK7FbJ-Q3WPaaHeW-F2d_DMJNHiVt47w7Auk",
 							"type": "string"
 						}
 					]
@@ -217,14 +217,14 @@
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/D:/File Pembelajaran/Semester 6/Bangkit/Capstone/PROJECT/Repository/Backend-Node-Js/images/tugumuda.jpg"
+							"src": "/D:/File Pembelajaran/Semester 6/Bangkit/Capstone/PROJECT/Repository/Backend-Node-Js/images/monas.jpg"
 						}
 					]
 				},
 				"url": {
-					"raw": "{{lokal}}/upload",
+					"raw": "{{server}}/upload",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"upload"
@@ -241,7 +241,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTYzMywiZXhwIjoxNjUzNjE2ODMzfQ.D_nmd78ip-H7X9YMyKLJHsiahl9Lcb2lM7_ysslJ7Bo",
 							"type": "string"
 						}
 					]
@@ -249,9 +249,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/getdatabyimg?classname=monumen nasional",
+					"raw": "{{server}}/getdatabyimg?classname=monumen nasional",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"getdatabyimg"
@@ -274,7 +274,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MjkzMywiZXhwIjoxNjUzNTg0MTMzfQ.sOr2D8cKhubxXR3zxLajv_9BN6MsdwxwTnDFp80J3gs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTYzMywiZXhwIjoxNjUzNjE2ODMzfQ.D_nmd78ip-H7X9YMyKLJHsiahl9Lcb2lM7_ysslJ7Bo",
 							"type": "string"
 						}
 					]
@@ -282,9 +282,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/image",
+					"raw": "{{server}}/image",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"image"
@@ -301,7 +301,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4Mjc3MywiZXhwIjoxNjUzNTgzOTczfQ.JMBYMvS6KW8yPvf4HeNhKnA5L8S43ITs1Gy8KTE4F30",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTYzMywiZXhwIjoxNjUzNjE2ODMzfQ.D_nmd78ip-H7X9YMyKLJHsiahl9Lcb2lM7_ysslJ7Bo",
 							"type": "string"
 						}
 					]
@@ -309,9 +309,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/image/1",
+					"raw": "{{server}}/image/1",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"image",
@@ -329,7 +329,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU3OTY0MSwiZXhwIjoxNjUzNTgwODQxfQ.F2xWsdZhkDTBre10AtXWyyoX1P26RoITLq-dXRgvJs0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0OCwiZXhwIjoxNjUzNjE2NDQ4fQ.XbEYJMq-KmyMyCAKy6Qt2LjkrSx8uKNrCk7WGPAPsiU",
 							"type": "string"
 						}
 					]
@@ -337,9 +337,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{lokal}}/logout",
+					"raw": "{{server}}/logout",
 					"host": [
-						"{{lokal}}"
+						"{{server}}"
 					],
 					"path": [
 						"logout"
