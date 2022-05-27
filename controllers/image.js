@@ -2,6 +2,8 @@ import Multer from 'multer';
 import { Storage } from '@google-cloud/storage';
 import dotenv from 'dotenv';
 import Images from '../models/image.js';
+import db from '../config/database.js';
+import { QueryTypes } from 'sequelize';
 
 
 dotenv.config()
@@ -23,6 +25,63 @@ export const multer = Multer({
 
 export const bucket = storage.bucket(process.env.GCS_BUCKET);
 
+export const uploadByUser = async (req,res) => {
+    const username = req.body.username
+    const newFileName = Date.now() + "-" + req.file.originalname;
+    const blob = bucket.file(newFileName);
+    const blobStream = blob.createWriteStream();
+
+    blobStream.on("error", err => console.log(err));
+
+    blobStream.on("finish", () => {
+        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET}/${blob.name}`;
+        // res.json({ 
+        //     message: 'upload success',
+        //     data: publicUrl
+        // });
+        
+        Images.create({
+            uploadedBy: username,
+            image: publicUrl
+        })
+        .then(() => res.status(201).send({ 
+            message: 'Upload Success',
+            uploadedBy: username,
+            image: publicUrl
+        }));
+    })
+    blobStream.end(req.file.buffer);
+}
+
+export const getUploadedImageByIduser = async(req, res) => {
+    const username = req.query.username;
+    const images = await db.query(
+        // `SELECT * FROM user_image WHERE uploadedBy LIKE '%` + username + `%';`,
+        `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
+        }
+    );
+    if (images){
+        res.status(200).json(images);
+    } else {
+        res.status(200).json({ message: "No Images Uploaded"});
+    }
+    
+}
+
+
+
+// export const getUploadedImageByIduser = async(req, res) => {
+//     let userId = req.params.userId;
+//     let image = await Images.findAll({
+//         where:{
+//             userId: userId
+//         }
+//     });
+//     res.status(200).send(image);
+// }
 
 export const getImageByid = async(req, res) => {
     let id = req.params.id;

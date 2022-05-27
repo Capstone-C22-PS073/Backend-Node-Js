@@ -29,11 +29,12 @@ PRIMARY KEY (`id`)) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS `user_image` (
 `id` INTEGER NOT NULL auto_increment , 
-`username` VARCHAR(255), 
+`uploadedBy` VARCHAR(200) NOT NULL, 
 `image` VARCHAR(300) NOT NULL, 
 `createdAt` DATE, 
 `updatedAt` DATE, 
-PRIMARY KEY (`id`)) ENGINE=InnoDB;
+PRIMARY KEY (`id`), 
+FOREIGN KEY (`uploadedBy`) REFERENCES `users` (`username`)) ENGINE=InnoDB;
 
 --  Dummy Data
 INSERT INTO `toursight` (`id`, `name`, `location`, `category`, `image`, `deskripsi`) VALUES

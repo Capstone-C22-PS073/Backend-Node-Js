@@ -1,5 +1,5 @@
 import Toursight from '../models/toursight-model.js';
-import { Op, QueryTypes, Sequelize } from 'sequelize';
+import { QueryTypes } from 'sequelize';
 import db from '../config/database.js';
 
 export const getAllToursight = async(req, res, next) => {

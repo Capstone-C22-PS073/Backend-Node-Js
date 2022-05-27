@@ -60,18 +60,18 @@ export const Login = async(req,res) => {
         if(!match) {
             return res.status(400).json({msg:"Wrong Password"});
         }
-        const userId = user[0].id;
+        const id = user[0].id;
         const username = user[0].username;
         const email = user[0].email;
-        const accessToken = jwt.sign({userId, username, email}, process.env.ACCESS_TOKEN_SECRET, {
+        const accessToken = jwt.sign({id, username, email}, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: '1200s'
         });
-        const refreshToken = jwt.sign({userId, username, email}, process.env.REFRESH_TOKEN_SECRET, {
+        const refreshToken = jwt.sign({id, username, email}, process.env.REFRESH_TOKEN_SECRET, {
             expiresIn: '1d'
         });
         await Users.update({refresh_token:refreshToken},{
             where:{
-                id: userId
+                id: id
             }
         });
         res.cookie('refreshToken', refreshToken, {
@@ -79,7 +79,7 @@ export const Login = async(req,res) => {
             maxAge: 24 * 60 * 60 * 1000 
             // secure: true, //untuk server yang ada ssl
         });
-        res.status(201).json({ username, email, accessToken });
+        res.status(201).json({ id, username, email, accessToken });
     } catch (err) {
         res.status(404).json({msg: "Email tidak ditemukan"});
     }

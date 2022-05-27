@@ -10,6 +10,14 @@ const Images = db.define('user_image', {
        primaryKey: true,
        type: DataTypes.INTEGER
     },
+    uploadedBy:{
+        allowNull: false,
+        type: DataTypes.STRING(200),
+        references:{
+            model: 'users',
+            key: 'username'
+        }
+    },
     image:{
         type: DataTypes.STRING(300),
         allowNull: false
