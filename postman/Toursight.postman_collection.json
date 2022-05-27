@@ -32,17 +32,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/users",
-					"protocol": "http",
+					"raw": "{{lokal}}/users",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"users"
 					]
 				}
@@ -70,17 +64,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/login",
-					"protocol": "http",
+					"raw": "{{lokal}}/login",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"login"
 					]
 				}
@@ -95,7 +83,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MjkzMywiZXhwIjoxNjUzNTg0MTMzfQ.sOr2D8cKhubxXR3zxLajv_9BN6MsdwxwTnDFp80J3gs",
 							"type": "string"
 						}
 					]
@@ -103,17 +91,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/toursight",
-					"protocol": "http",
+					"raw": "{{lokal}}/toursight",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"toursight"
 					]
 				}
@@ -123,20 +105,24 @@
 		{
 			"name": "Get Toursight By Id",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/toursight/1",
-					"protocol": "http",
+					"raw": "{{lokal}}/toursight/1",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"toursight",
 						"1"
 					]
@@ -152,7 +138,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
 							"type": "string"
 						}
 					]
@@ -160,17 +146,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/search?keyword=monumen nasional",
-					"protocol": "http",
+					"raw": "{{lokal}}/search?keyword=monumen nasional",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"search"
 					],
 					"query": [
@@ -186,41 +166,12 @@
 		{
 			"name": "Search By Category",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://34.101.235.147:8080/api/category?category=monumen",
-					"protocol": "http",
-					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"category"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "monumen"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Query Data Classname",
-			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
 							"type": "string"
 						}
 					]
@@ -228,17 +179,81 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/getdatabyimg?classname=monumen nasional",
-					"protocol": "http",
+					"raw": "{{lokal}}/category?category=makanan",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
+						"category"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "makanan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Img by User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MjkzMywiZXhwIjoxNjUzNTg0MTMzfQ.sOr2D8cKhubxXR3zxLajv_9BN6MsdwxwTnDFp80J3gs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/File Pembelajaran/Semester 6/Bangkit/Capstone/PROJECT/Repository/Backend-Node-Js/images/tugumuda.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{lokal}}/upload",
+					"host": [
+						"{{lokal}}"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Data By Classname",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MTk0MiwiZXhwIjoxNjUzNTgzMTQyfQ.xvHFdpcZQ5oeN4bi_jPcHsNQGlt4f8HXXPXM8ZCGKhI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{lokal}}/getdatabyimg?classname=monumen nasional",
+					"host": [
+						"{{lokal}}"
+					],
+					"path": [
 						"getdatabyimg"
 					],
 					"query": [
@@ -252,43 +267,55 @@
 			"response": []
 		},
 		{
-			"name": "Upload Image",
+			"name": "Get All Image Uploaded by User from Bucket",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4MjkzMywiZXhwIjoxNjUzNTg0MTMzfQ.sOr2D8cKhubxXR3zxLajv_9BN6MsdwxwTnDFp80J3gs",
 							"type": "string"
 						}
 					]
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
+				"url": {
+					"raw": "{{lokal}}/image",
+					"host": [
+						"{{lokal}}"
+					],
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Uploaded Image by Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "image",
-							"type": "file",
-							"src": "/D:/File Pembelajaran/Semester 6/Bangkit/Capstone/PROJECT/Repository/Backend-Node-Js/images/monas.jpg"
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU4Mjc3MywiZXhwIjoxNjUzNTgzOTczfQ.JMBYMvS6KW8yPvf4HeNhKnA5L8S43ITs1Gy8KTE4F30",
+							"type": "string"
 						}
 					]
 				},
+				"method": "GET",
+				"header": [],
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/upload",
-					"protocol": "http",
+					"raw": "{{lokal}}/image/1",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
-						"upload"
+						"image",
+						"1"
 					]
 				}
 			},
@@ -302,7 +329,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQ5MDEyMCwiZXhwIjoxNjUzNDkxMzIwfQ.KaXhUEY_d-Ry4_dLR037RQQY8Uc7CIqlkThaqYfA0_Q",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU3OTY0MSwiZXhwIjoxNjUzNTgwODQxfQ.F2xWsdZhkDTBre10AtXWyyoX1P26RoITLq-dXRgvJs0",
 							"type": "string"
 						}
 					]
@@ -310,17 +337,11 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://34.101.235.147:8080/api/logout",
-					"protocol": "http",
+					"raw": "{{lokal}}/logout",
 					"host": [
-						"34",
-						"101",
-						"235",
-						"147"
+						"{{lokal}}"
 					],
-					"port": "8080",
 					"path": [
-						"api",
 						"logout"
 					]
 				}
@@ -333,7 +354,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzQwNzM1NCwiZXhwIjoxNjUzNDA3OTU0fQ.D3bLss0ag69w1B6TPKpkZGHgpZqt0ywe46cIbmimvhA",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzU3OTUyOSwiZXhwIjoxNjUzNTgwNzI5fQ.TIcXEqPlxZ47kCU5RgqXnmG0YtjNGQvJBmSAOfA2IE4",
 				"type": "string"
 			}
 		]
@@ -360,8 +381,13 @@
 	],
 	"variable": [
 		{
-			"key": "url",
-			"value": "34.101.235.147:8080/api",
+			"key": "lokal",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		},
+		{
+			"key": "server",
+			"value": "http://34.101.235.147/api",
 			"type": "string"
 		}
 	]
