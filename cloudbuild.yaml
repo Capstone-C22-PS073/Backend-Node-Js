@@ -6,4 +6,4 @@ steps:
   - '-c'
   - |
     set -x && \
-    gcloud compute ssh toursight-server -y --zone=asia-southeast2-a --command='/bin/sh /home/c2312f2674/pull.sh'
+    gcloud compute ssh toursight-server --zone=asia-southeast2-a --command='/bin/sh /home/c2312f2674/pull.sh'

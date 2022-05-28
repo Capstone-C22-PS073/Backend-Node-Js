@@ -41,7 +41,7 @@ app.get('/', function(err,res){
 app.use(`/api`, routes);
 
 // static Image folder
-app.use('/images', express.static('./images'));
+// app.use('/images', express.static('./images'));
 
 
 // set HOST and PORT

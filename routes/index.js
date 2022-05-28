@@ -5,7 +5,7 @@ import { refreshToken } from '../controllers/refreshToken.js';
 import { addToursight, getAllToursight, getDataByCategory, getDataByClassName, getToursightByid, searchToursightByName } from '../controllers/toursight.js';
 import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
 import { multer, bucket, getAllImgByUser, getImageByid, getUploadedImageByIduser, uploadByUser } from '../controllers/image.js';
-import Images from '../models/image.js';
+// import Images from '../models/image.js';
 // import { getInfoByImg } from '../controllers/predict.js';
 
 
