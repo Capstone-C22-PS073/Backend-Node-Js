@@ -1,6 +1,11 @@
 import Toursight from '../models/toursight-model.js';
 import { QueryTypes } from 'sequelize';
 import db from '../config/database.js';
+import dotenv from 'dotenv';
+import Multer from 'multer';
+import { Storage } from '@google-cloud/storage';
+
+dotenv.config()
 
 export const getAllToursight = async(req, res, next) => {
     try{
@@ -14,18 +19,70 @@ export const getAllToursight = async(req, res, next) => {
     }
 };
 
-export const addToursight = async(req, res) => {
-    let input = {
-        name: req.body.name,
-        location: req.body.location,
-        category: req.body.category,
-        image: req.file.path,
-        deskripsi: req.body.deskripsi
+
+export const storage = new Storage({
+    projectId: process.env.GCLOUD_PROJECT, 
+    credentials: {
+        client_email: process.env.GCLOUD_CLIENT_EMAIL,
+        private_key: process.env.GCLOUD_PRIVATE_KEY,
     }
-    const toursight = await Toursight.create(input)
-    res.status(200).send(toursight);
-    console.log(toursight);
-};
+})
+
+export const multer = Multer({
+    storage: Multer.memoryStorage(),
+    limits: { 
+        fileSize: '5 * 1024 * 1024'
+    }
+})
+
+export const bucket = storage.bucket(process.env.GCS_BUCKET_DUMMY);
+
+export const uploadDummy = async (req,res) => {
+    const name = req.body.name;
+    const category = req.body.category;
+    const location = req.body.location;
+    const image = req.file.originalname
+    const deskripsi = req.body.deskripsi;
+    
+    const blob = bucket.file(image);
+    const blobStream = blob.createWriteStream();
+
+    blobStream.on("error", err => console.log(err));
+
+    blobStream.on("finish", () => {
+        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET_DUMMY}/${blob.name}`;
+        Toursight.create({
+            name: name,
+            category: category,
+            location: location,
+            image: publicUrl,
+            deskripsi: deskripsi
+        })
+        .then(() => res.status(201).send({ 
+            message: 'Upload Success',
+            name: name,
+            category: category,
+            location: location,
+            image: publicUrl,
+            deskripsi: deskripsi
+        }));
+    })
+    blobStream.end(req.file.buffer);
+}
+
+
+// export const addToursight = async(req, res) => {
+//     let input = {
+//         name: req.body.name,
+//         location: req.body.location,
+//         category: req.body.category,
+//         image: req.file.path,
+//         deskripsi: req.body.deskripsi
+//     }
+//     const toursight = await Toursight.create(input)
+//     res.status(200).send(toursight);
+//     console.log(toursight);
+// };
 
 export const getToursightByid = async(req, res) => {
     let id = req.params.id;

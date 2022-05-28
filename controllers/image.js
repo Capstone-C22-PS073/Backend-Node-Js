@@ -53,6 +53,21 @@ export const uploadByUser = async (req,res) => {
     blobStream.end(req.file.buffer);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const getUploadedImageByIduser = async(req, res) => {
     const username = req.query.username;
     const images = await db.query(
@@ -70,8 +85,6 @@ export const getUploadedImageByIduser = async(req, res) => {
     }
     
 }
-
-
 
 // export const getUploadedImageByIduser = async(req, res) => {
 //     let userId = req.params.userId;
