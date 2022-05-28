@@ -7,346 +7,927 @@
 	},
 	"item": [
 		{
-			"name": "Register",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "user1",
-							"type": "text"
+			"name": "server",
+			"item": [
+				{
+					"name": "Upload Dummy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "pizza",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "makanan",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "italia",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "deskripsi",
+									"value": "ini pizza",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "email",
-							"value": "user1@gmail.com",
-							"type": "text"
+						"url": {
+							"raw": "{{server}}/dummy",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"dummy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "tante",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tante21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "password",
-							"value": "12345678",
-							"type": "text"
+						"url": {
+							"raw": "{{server}}/users",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{server}}/users",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "email",
-							"value": "user1@gmail.com",
-							"type": "text"
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "tante21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "password",
-							"value": "12345678",
-							"type": "text"
+						"url": {
+							"raw": "{{server}}/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"login"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{server}}/login",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"login"
-					]
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/token",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Toursight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/toursight",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"toursight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Toursight By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/toursight/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"toursight",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Toursight By Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/search?keyword=masjid",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "masjid"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/category?category=monumen",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "monumen"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Data By Classname",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/getdatabyimg?classname=monas",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"getdatabyimg"
+							],
+							"query": [
+								{
+									"key": "classname",
+									"value": "monas"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Img by User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "tante",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Aldo/Pictures/pizza.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/image",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Img Uploaded By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/imageuser/?username=tante",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"imageuser",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "tante"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/image",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Uploaded Image by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/image/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJkaWFzIiwiZW1haWwiOiJkaWFzQGdtYWlsLmNvbSIsImlhdCI6MTY1MzY1Njg1OCwiZXhwIjoxNjUzNjU4MDU4fQ.Xlo7zm2IZWnNl66bM9NhN34LG4V0kAbvyJ-XHGWHvjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/logout",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "View All Toursight",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYzODIxNSwiZXhwIjoxNjUzNjM5NDE1fQ.OCYcaFR4plCerUt752YRXpLbYa6FbdSL065C7_b8wGw",
-							"type": "string"
+			"name": "lokal",
+			"item": [
+				{
+					"name": "Upload Dummy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "pizza",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "makanan",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "italia",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Aldo/Pictures/bg.jpg"
+								},
+								{
+									"key": "deskripsi",
+									"value": "ini pizza",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lokal}}/dummy",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"dummy"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/toursight",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"toursight"
-					]
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Tante",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tante21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lokal}}/users",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "tante21@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lokal}}/login",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Toursight",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/toursight",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"toursight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Toursight By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/toursight/1",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"toursight",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Toursight By Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/search?keyword=masjid",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "masjid"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search By Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/category?category=MAKANAN",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "MAKANAN"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query Data By Classname",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/getdatabyimg?classname=monas",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"getdatabyimg"
+							],
+							"query": [
+								{
+									"key": "classname",
+									"value": "monas"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Img by User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjEyMzksImV4cCI6MTY1MzcyMTUzOX0.G4fEdgYeYwRtSITe4Gs3Y0Xys8ClRz1wCvo_IaXT16w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Tante",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Aldo/Pictures/GCP Cheat Sheets.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{lokal}}/image",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/image",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Img Uploaded By User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/imageuser/?username=Tante",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"imageuser",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "Tante"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Uploaded Image by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/image/1",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{lokal}}/logout",
+							"host": [
+								"{{lokal}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Toursight By Id",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNjk3MCwiZXhwIjoxNjUzNjE4MTcwfQ.yQeWHLqvATdUP4WNEEKW_xWA_BkPUC2lZciTPA0O0jI",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/toursight/28",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"toursight",
-						"28"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Search Toursight By Name",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNjk3MCwiZXhwIjoxNjUzNjE4MTcwfQ.yQeWHLqvATdUP4WNEEKW_xWA_BkPUC2lZciTPA0O0jI",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/search?keyword=masjid",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"search"
-					],
-					"query": [
-						{
-							"key": "keyword",
-							"value": "masjid"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Search By Category",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNjk3MCwiZXhwIjoxNjUzNjE4MTcwfQ.yQeWHLqvATdUP4WNEEKW_xWA_BkPUC2lZciTPA0O0jI",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/category?category=makanan",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"category"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "makanan"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Upload Img by User",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYzODIxNSwiZXhwIjoxNjUzNjM5NDE1fQ.OCYcaFR4plCerUt752YRXpLbYa6FbdSL065C7_b8wGw",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "image",
-							"type": "file",
-							"src": "/D:/File Pembelajaran/Semester 6/Bangkit/Capstone/PROJECT/Backend-Node-Js/images/puraulun.jpg"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{server}}/upload",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"upload"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Query Data By Classname",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYzODIxNSwiZXhwIjoxNjUzNjM5NDE1fQ.OCYcaFR4plCerUt752YRXpLbYa6FbdSL065C7_b8wGw",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/getdatabyimg?classname=pura ulun",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"getdatabyimg"
-					],
-					"query": [
-						{
-							"key": "classname",
-							"value": "pura ulun"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Image Uploaded by User from Bucket",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYzODIxNSwiZXhwIjoxNjUzNjM5NDE1fQ.OCYcaFR4plCerUt752YRXpLbYa6FbdSL065C7_b8wGw",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/image",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"image"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Uploaded Image by Id",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYzODIxNSwiZXhwIjoxNjUzNjM5NDE1fQ.OCYcaFR4plCerUt752YRXpLbYa6FbdSL065C7_b8wGw",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/image/2",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"image",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Logout",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlhdCI6MTY1MzYxNTI0OCwiZXhwIjoxNjUzNjE2NDQ4fQ.XbEYJMq-KmyMyCAKy6Qt2LjkrSx8uKNrCk7WGPAPsiU",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{server}}/logout",
-					"host": [
-						"{{server}}"
-					],
-					"path": [
-						"logout"
-					]
-				}
-			},
-			"response": []
+			]
 		}
 	],
 	"auth": {
@@ -387,7 +968,7 @@
 		},
 		{
 			"key": "server",
-			"value": "http://34.101.235.147/api",
+			"value": "http://34.101.235.147:8080/api",
 			"type": "string"
 		}
 	]

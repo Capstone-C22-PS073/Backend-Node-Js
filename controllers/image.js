@@ -53,25 +53,9 @@ export const uploadByUser = async (req,res) => {
     blobStream.end(req.file.buffer);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const getUploadedImageByIduser = async(req, res) => {
     const username = req.query.username;
     const images = await db.query(
-        // `SELECT * FROM user_image WHERE uploadedBy LIKE '%` + username + `%';`,
         `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
         {
             type: QueryTypes.SELECT,
@@ -86,15 +70,6 @@ export const getUploadedImageByIduser = async(req, res) => {
     
 }
 
-// export const getUploadedImageByIduser = async(req, res) => {
-//     let userId = req.params.userId;
-//     let image = await Images.findAll({
-//         where:{
-//             userId: userId
-//         }
-//     });
-//     res.status(200).send(image);
-// }
 
 export const getImageByid = async(req, res) => {
     let id = req.params.id;
@@ -114,3 +89,13 @@ export const getAllImgByUser = async(req, res) => {
         console.log(err);
     }
 }
+
+// export const getUploadedImageByIduser = async(req, res) => {
+//     let userId = req.params.userId;
+//     let image = await Images.findAll({
+//         where:{
+//             userId: userId
+//         }
+//     });
+//     res.status(200).send(image);
+// }

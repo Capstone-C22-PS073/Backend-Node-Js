@@ -1,6 +1,7 @@
 import multer from 'multer';
 import path from 'path';
 
+// for local save without bucket
 export const storage = multer.diskStorage({
     destination: function (req, file, cb) {
        cb(null, './images');
