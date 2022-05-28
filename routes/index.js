@@ -5,7 +5,6 @@ import { refreshToken } from '../controllers/refreshToken.js';
 import { getAllToursight, getDataByCategory, getDataByClassName, getToursightByid, searchToursightByName, uploadDummy } from '../controllers/toursight.js';
 // import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
 import { multer, bucket, getAllImgByUser, getImageByid, getUploadedImageByIduser, uploadByUser } from '../controllers/image.js';
-// import Images from '../models/image.js';
 // import { getInfoByImg } from '../controllers/predict.js';
 
 
@@ -16,13 +15,13 @@ const router = Router();
 router.post('/users', Register);
 router.post('/login', Login);
 router.get('/token', verifyToken, refreshToken);
-router.get('/users', verifyToken, getUsers);
 router.delete('/logout', verifyToken, Logout);
 
-
-// Upload Dummy Data (Admin)
+// Resource Admin
+router.post('/dummy', multer.single('image'), uploadDummy); // Upload Dummy Data 
+router.get('/users', getUsers);
 // router.post('/dummy', uploadImg, addToursight);
-router.post('/dummy', multer.single('image'), uploadDummy);
+
 
 
 // Resource User

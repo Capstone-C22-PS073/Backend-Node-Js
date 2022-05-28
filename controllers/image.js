@@ -54,7 +54,7 @@ export const uploadByUser = async (req,res) => {
 }
 
 export const getUploadedImageByIduser = async(req, res) => {
-    const username = req.query.username;
+    const username = req.body.username;
     const images = await db.query(
         `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
         {
