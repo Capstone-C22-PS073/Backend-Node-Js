@@ -107,7 +107,7 @@ export const searchToursightByName = async(req, res) => {
 }
 
 export const getDataByClassName = async(req, res) => {
-    const getData = req.query.classname;
+    const getData = req.body.classname;
     const toursight = await db.query(
         `SELECT * FROM toursight WHERE name LIKE '%` + getData + `%' LIMIT 1;`,
         {
