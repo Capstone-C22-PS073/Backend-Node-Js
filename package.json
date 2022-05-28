@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "prod": "set NODE_ENV = production && node app.js",
-    "server": "set NODE_ENV = production && pm2 start app.js"
+    "server": "set NODE_ENV = production && pm2 start app.js --watch"
   },
   "author": "",
   "license": "ISC",
