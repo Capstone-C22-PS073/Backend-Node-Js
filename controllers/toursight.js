@@ -44,7 +44,7 @@ export const uploadDummy = async (req,res) => {
     const image = req.file.originalname
     const deskripsi = req.body.deskripsi;
     
-    const blob = bucket.file(image);
+    const blob = bucket.file("images/"+ image);
     const blobStream = blob.createWriteStream();
 
     blobStream.on("error", err => console.log(err));
