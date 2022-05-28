@@ -50,7 +50,7 @@ export const uploadDummy = async (req,res) => {
     blobStream.on("error", err => console.log(err));
 
     blobStream.on("finish", () => {
-        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET_DUMMY}/images/${blob.name}`;
+        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET_DUMMY}/${blob.name}`;
         Toursight.create({
             name: name,
             category: category,
