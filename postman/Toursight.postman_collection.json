@@ -160,7 +160,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM4MjY0OTcsImV4cCI6MTY1MzgyODI5N30.nYMjgMhA0iF-9ylu_TQiPI7ozUURL8furiJu_VQAwNU",
 									"type": "string"
 								}
 							]
@@ -187,7 +187,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM4MjY0OTcsImV4cCI6MTY1MzgyODI5N30.nYMjgMhA0iF-9ylu_TQiPI7ozUURL8furiJu_VQAwNU",
 									"type": "string"
 								}
 							]
@@ -195,13 +195,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server}}/toursight/1",
+							"raw": "{{server}}/toursight/5",
 							"host": [
 								"{{server}}"
 							],
 							"path": [
 								"toursight",
-								"1"
+								"5"
 							]
 						}
 					},
@@ -215,7 +215,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM4MjY0OTcsImV4cCI6MTY1MzgyODI5N30.nYMjgMhA0iF-9ylu_TQiPI7ozUURL8furiJu_VQAwNU",
 									"type": "string"
 								}
 							]
@@ -248,7 +248,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3NTI2MDIsImV4cCI6MTY1Mzc1NDQwMn0.8r_Tpy8HulXHPmiJnklY11JNX2jSmNEqWOLFfHzoUs0",
 									"type": "string"
 								}
 							]
@@ -256,7 +256,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server}}/category?category=monumen",
+							"raw": "{{server}}/category?category=food",
 							"host": [
 								"{{server}}"
 							],
@@ -266,7 +266,7 @@
 							"query": [
 								{
 									"key": "category",
-									"value": "monumen"
+									"value": "food"
 								}
 							]
 						}
@@ -275,21 +275,34 @@
 				},
 				{
 					"name": "Query Data By Classname",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3NTEyMDIsImV4cCI6MTY1Mzc1MzAwMn0.oMlF3JodtRovcm5o_BrRb-F7RQuAke1GzTZ_tBi2iEw",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "classname",
+									"value": "monas",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "{{server}}/getdatabyimg?classname=monas",
+							"raw": "{{server}}/getdatabyimg",
 							"host": [
 								"{{server}}"
 							],
@@ -299,7 +312,8 @@
 							"query": [
 								{
 									"key": "classname",
-									"value": "monas"
+									"value": "monas",
+									"disabled": true
 								}
 							]
 						}
@@ -350,32 +364,45 @@
 				},
 				{
 					"name": "Get Img Uploaded By User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3NTI2MDIsImV4cCI6MTY1Mzc1NDQwMn0.8r_Tpy8HulXHPmiJnklY11JNX2jSmNEqWOLFfHzoUs0",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "{{server}}/imageuser/?username=tante",
+							"raw": "{{server}}/imageuser",
 							"host": [
 								"{{server}}"
 							],
 							"path": [
-								"imageuser",
-								""
+								"imageuser"
 							],
 							"query": [
 								{
 									"key": "username",
-									"value": "tante"
+									"value": "tante",
+									"disabled": true
 								}
 							]
 						}
@@ -390,7 +417,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3NTEyMDIsImV4cCI6MTY1Mzc1MzAwMn0.oMlF3JodtRovcm5o_BrRb-F7RQuAke1GzTZ_tBi2iEw",
 									"type": "string"
 								}
 							]
@@ -417,7 +444,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJQYW1hbiIsImVtYWlsIjoicGFtYW4yMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjI2MjMsImV4cCI6MTY1MzcyMjkyM30.Ia7Bb07wz3wD30TTDbYYfHtXFftg96teD-MYtmEK6tE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0YW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3NTEyMDIsImV4cCI6MTY1Mzc1MzAwMn0.oMlF3JodtRovcm5o_BrRb-F7RQuAke1GzTZ_tBi2iEw",
 									"type": "string"
 								}
 							]
@@ -425,13 +452,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server}}/image/1",
+							"raw": "{{server}}/image/3",
 							"host": [
 								"{{server}}"
 							],
 							"path": [
 								"image",
-								"1"
+								"3"
 							]
 						}
 					},
@@ -526,12 +553,12 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "Tante",
+									"value": "user2",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "tante21@gmail.com",
+									"value": "user2@gmail.com",
 									"type": "text"
 								},
 								{
@@ -563,7 +590,7 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "tante21@gmail.com",
+									"value": "user2@gmail.com",
 									"type": "text"
 								},
 								{
@@ -593,7 +620,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzQ5NTEzLCJleHAiOjE2NTM3NTEzMTN9.kpTU9UHe3g6quX519AlaDRqqSO0a58hMpiWUSLY0OPo",
 									"type": "string"
 								}
 							]
@@ -623,7 +650,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzQ5NTEzLCJleHAiOjE2NTM3NTEzMTN9.kpTU9UHe3g6quX519AlaDRqqSO0a58hMpiWUSLY0OPo",
 									"type": "string"
 								}
 							]
@@ -650,7 +677,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzQ5NTEzLCJleHAiOjE2NTM3NTEzMTN9.kpTU9UHe3g6quX519AlaDRqqSO0a58hMpiWUSLY0OPo",
 									"type": "string"
 								}
 							]
@@ -658,13 +685,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{lokal}}/toursight/1",
+							"raw": "{{lokal}}/toursight/23",
 							"host": [
 								"{{lokal}}"
 							],
 							"path": [
 								"toursight",
-								"1"
+								"23"
 							]
 						}
 					},
@@ -678,7 +705,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzQ5NTEzLCJleHAiOjE2NTM3NTEzMTN9.kpTU9UHe3g6quX519AlaDRqqSO0a58hMpiWUSLY0OPo",
 									"type": "string"
 								}
 							]
@@ -686,7 +713,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{lokal}}/search?keyword=masjid",
+							"raw": "{{lokal}}/search?keyword=monas",
 							"host": [
 								"{{lokal}}"
 							],
@@ -696,7 +723,7 @@
 							"query": [
 								{
 									"key": "keyword",
-									"value": "masjid"
+									"value": "monas"
 								}
 							]
 						}
@@ -711,7 +738,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzQ5NTEzLCJleHAiOjE2NTM3NTEzMTN9.kpTU9UHe3g6quX519AlaDRqqSO0a58hMpiWUSLY0OPo",
 									"type": "string"
 								}
 							]
@@ -719,7 +746,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{lokal}}/category?category=MAKANAN",
+							"raw": "{{lokal}}/category?category=landmark",
 							"host": [
 								"{{lokal}}"
 							],
@@ -729,7 +756,7 @@
 							"query": [
 								{
 									"key": "category",
-									"value": "MAKANAN"
+									"value": "landmark"
 								}
 							]
 						}
@@ -738,21 +765,34 @@
 				},
 				{
 					"name": "Query Data By Classname",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ1c2VyMiIsImVtYWlsIjoidXNlcjJAZ21haWwuY29tIiwiaWF0IjoxNjUzNzUxNTAxLCJleHAiOjE2NTM3NTMzMDF9.AKN0NXg10MFD2TG0vjeoqc53bPTodzMcYtTDk1QgUJo",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "classname",
+									"value": "gedung sate",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "{{lokal}}/getdatabyimg?classname=monas",
+							"raw": "{{lokal}}/getdatabyimg",
 							"host": [
 								"{{lokal}}"
 							],
@@ -762,7 +802,8 @@
 							"query": [
 								{
 									"key": "classname",
-									"value": "monas"
+									"value": "monas",
+									"disabled": true
 								}
 							]
 						}
@@ -777,7 +818,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MjEyMzksImV4cCI6MTY1MzcyMTUzOX0.G4fEdgYeYwRtSITe4Gs3Y0Xys8ClRz1wCvo_IaXT16w",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzUwNDE1LCJleHAiOjE2NTM3NTIyMTV9.nBGjwDjhp0MJBX74w3Iky0IudDFxYufcGSsPe7kULZg",
 									"type": "string"
 								}
 							]
@@ -789,13 +830,13 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "Tante",
+									"value": "user2",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/Aldo/Pictures/GCP Cheat Sheets.png"
+									"src": "/C:/Users/Aldo/Pictures/bg.jpg"
 								}
 							]
 						},
@@ -819,7 +860,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzUwNDE1LCJleHAiOjE2NTM3NTIyMTV9.nBGjwDjhp0MJBX74w3Iky0IudDFxYufcGSsPe7kULZg",
 									"type": "string"
 								}
 							]
@@ -840,33 +881,39 @@
 				},
 				{
 					"name": "Get Img Uploaded By User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJUYW50ZSIsImVtYWlsIjoidGFudGUyMUBnbWFpbC5jb20iLCJpYXQiOjE2NTM3MzczMjksImV4cCI6MTY1MzczNzYyOX0.rm9zVuc0C0repuKKvbLpL4lZ_avaSbbgEJrx7N7qnHo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjUzNzUwNDE1LCJleHAiOjE2NTM3NTIyMTV9.nBGjwDjhp0MJBX74w3Iky0IudDFxYufcGSsPe7kULZg",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user1",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "{{lokal}}/imageuser/?username=Tante",
+							"raw": "{{lokal}}/imageuser",
 							"host": [
 								"{{lokal}}"
 							],
 							"path": [
-								"imageuser",
-								""
-							],
-							"query": [
-								{
-									"key": "username",
-									"value": "Tante"
-								}
+								"imageuser"
 							]
 						}
 					},
@@ -928,6 +975,33 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/users",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -968,7 +1042,7 @@
 		},
 		{
 			"key": "server",
-			"value": "http://34.101.235.147:8080/api",
+			"value": "https://belajarteknologi.space/api",
 			"type": "string"
 		}
 	]
