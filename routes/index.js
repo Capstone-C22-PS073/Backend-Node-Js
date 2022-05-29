@@ -5,6 +5,7 @@ import { refreshToken } from '../controllers/refreshToken.js';
 import { getAllToursight, getDataByCategory, getDataByClassName, getToursightByid, searchToursightByName, uploadDummy } from '../controllers/toursight.js';
 // import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
 import { multer, getAllImgByUser, getImageByid, getUploadedImageByIduser, uploadByUser } from '../controllers/image.js';
+import axios from 'axios';
 // import { getInfoByImg } from '../controllers/predict.js';
 
 
@@ -20,6 +21,7 @@ router.delete('/logout', verifyToken, Logout);
 // Resource Admin
 router.post('/dummy', multer.single('image'), uploadDummy); // Upload Dummy Data 
 router.get('/users', getUsers);
+
 // router.post('/dummy', uploadImg, addToursight);
 
 
