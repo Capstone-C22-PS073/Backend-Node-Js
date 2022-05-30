@@ -23,7 +23,11 @@ const Toursight = db.define('toursight', {
     },
     deskripsi:{
         type: DataTypes.TEXT
+    },
+    history:{
+        type: DataTypes.TEXT
     }
+
 }, {
     freezeTableName: true,
     timestamps: false

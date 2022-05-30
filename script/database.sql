@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `toursight` (
 `category` VARCHAR(50), 
 `image` VARCHAR(200), 
 `deskripsi` TEXT, 
+`history` TEXT,
 PRIMARY KEY (`id`)) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS `user_image` (
