@@ -19,7 +19,7 @@ export const refreshToken = async(req, res) => {
             const accessToken = jwt.sign({id, username, email}, process.env.ACCESS_TOKEN_SECRET, {
                 expiresIn: '30m'
             });
-            return res.json({ id, username, email, accessToken });
+            return res.status(200).json({ id, username, email, accessToken });
         });
     } catch (err) {
         return console.log(err);

@@ -11,7 +11,7 @@ export const getUsers = async(req, res) => {
         if (users.length > null){
             return res.status(200).json(users);
         } 
-        return res.status(200).json({ message: "no users found"}); 
+        return res.status(204).json({ message: "no users found"}); 
     } catch (err) {
         console.log(err);
     }

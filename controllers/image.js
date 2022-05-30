@@ -65,7 +65,7 @@ export const getUploadedImageByUsername = async(req, res) => {
     if (images.length > null){
         return res.status(200).json(images);
     } 
-    return res.status(200).json({ message: "No Images Uploaded"}); 
+    return res.status(204).json({ message: "No Images Uploaded"}); 
 }
 
 
@@ -79,7 +79,7 @@ export const getImageByid = async(req, res) => {
     if(image) {
         return res.status(200).send(image);
     }
-    return res.status(404).send({message: "Image not found"});
+    return res.status(204).send({message: "Image not found"});
     
 }
 
@@ -89,7 +89,7 @@ export const getAllImgByUser = async(req, res) => {
         if(image.length > 0){
             return res.status(200).json(image);
         }
-        return res.status(404).json({message: "No Images uploaded by user"});
+        return res.status(204).json({message: "No Images uploaded by user"});
     } catch (err) {
         return res.json(err);
     }
