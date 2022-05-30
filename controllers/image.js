@@ -27,7 +27,7 @@ export const bucket = storage.bucket(process.env.GCS_BUCKET);
 
 export const uploadByUser = async (req,res) => {
     const username = req.body.username
-    const newFileName = Date.now() + "-" + req.file.originalname;
+    const newFileName = Date.now();
     const blob = bucket.file(newFileName);
     const blobStream = blob.createWriteStream();
 
