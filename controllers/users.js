@@ -8,7 +8,10 @@ export const getUsers = async(req, res) => {
         const users = await Users.findAll({
             attributes: ['id', 'username', 'email']
         });
-        res.json(users);
+        if (users.length > null){
+            return res.status(200).json(users);
+        } 
+        return res.status(200).json({ message: "no users found"}); 
     } catch (err) {
         console.log(err);
     }
@@ -31,10 +34,10 @@ export const Register = async(req, res) => {
 
     try{
         if( usernameExists ){
-            res.status(409).json({message: "Username is already exist"});
+            return res.status(409).json({message: "Username is already exist"});
         }
         if( emailExists ){
-            res.status(409).json({message: "Email is already registered"});
+            return res.status(409).json({message: "Email is already registered"});
         }
 
         await Users.create({
@@ -42,7 +45,7 @@ export const Register = async(req, res) => {
             email: email,
             password: hashPassword
         });
-        res.status(201).json({msg: "Register Berhasil"});
+        return res.status(201).json({msg: "Register Berhasil"});
     } catch (err){
         console.log(err);
     }
@@ -78,9 +81,9 @@ export const Login = async(req,res) => {
             maxAge: 24 * 60 * 60 * 1000 
             // secure: true, //untuk server yang ada ssl
         });
-        res.status(201).json({ id, username, email, accessToken, refreshToken });
+        return res.status(201).json({ id, username, email, accessToken, refreshToken });
     } catch (err) {
-        res.status(404).json({msg: "Email tidak ditemukan"});
+        return res.status(404).json({msg: "Email tidak ditemukan"});
     }
 }
 
@@ -101,5 +104,5 @@ export const Logout = async(req, res) => {
     });
     res.clearCookie('refreshToken');
     res.clearCookie('accessToken');
-    return res.sendStatus(200);
+    return res.sendStatus(200)
 }

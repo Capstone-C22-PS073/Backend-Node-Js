@@ -4,7 +4,7 @@ import { verifyToken } from '../middlewares/VerifyToken.js';
 import { refreshToken } from '../controllers/refreshToken.js';
 import { getAllToursight, getDataByCategory, getDataByClassName, getToursightByid, searchToursightByName, uploadDummy } from '../controllers/toursight.js';
 // import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
-import { multer, getAllImgByUser, getImageByid, getUploadedImageByIduser, uploadByUser } from '../controllers/image.js';
+import { multer, getAllImgByUser, getImageByid, getUploadedImageByUsername, uploadByUser } from '../controllers/image.js';
 // import { getInfoByImg } from '../controllers/predict.js';
 
 
@@ -34,7 +34,7 @@ router.get('/category', verifyToken, getDataByCategory);
 router.post('/image', verifyToken, multer.single('image'), uploadByUser);
 router.get('/image', verifyToken, getAllImgByUser);
 router.get('/image/:id', verifyToken, getImageByid);
-router.get('/imageuser', verifyToken, getUploadedImageByIduser);
+router.get('/imageuser', verifyToken, getUploadedImageByUsername);
 
 // Upload Image untuk temporary image recognition
 

@@ -91,7 +91,10 @@ export const getToursightByid = async(req, res) => {
            id : id
         }
     })
-    res.status(200).send(toursight);
+    if(toursight){
+        return res.status(200).json(toursight);
+    }
+    return res.status(404).json({message: "Toursight id not found"});
 }
 
 export const searchToursightByName = async(req, res) => {
@@ -103,7 +106,10 @@ export const searchToursightByName = async(req, res) => {
             raw: true,
         }
     );
-    res.json(toursight);
+    if(toursight.length > 0){
+        return res.status(200).json(toursight);
+    }
+    return res.status(404).json({message: "Toursight name not found"});
 }
 
 export const getDataByClassName = async(req, res) => {
@@ -115,7 +121,10 @@ export const getDataByClassName = async(req, res) => {
             raw: true,
         }
     );
-    res.json(toursight);
+    if(toursight.length > 0){
+        return res.status(200).json(toursight);
+    }
+    return res.status(404).json({message: "Toursight not found"});
 }
 
 export const getDataByCategory = async(req, res ) => {
@@ -128,5 +137,8 @@ export const getDataByCategory = async(req, res ) => {
             raw: true,
         }
     )
-    res.json(toursight);
+    if(toursight.length > 0){
+        return res.status(200).json(toursight);
+    }
+    return res.status(404).json({message: "Category not found"});
 }

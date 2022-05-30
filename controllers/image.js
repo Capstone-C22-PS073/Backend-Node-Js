@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import Images from '../models/image.js';
 import db from '../config/database.js';
 import { QueryTypes } from 'sequelize';
-
+// import Users from '../models/user-model.js';
 
 dotenv.config()
 
@@ -30,7 +30,7 @@ export const uploadByUser = async (req,res) => {
     const newFileName = Date.now() + "-" + req.file.originalname;
     const blob = bucket.file(newFileName);
     const blobStream = blob.createWriteStream();
-
+    
     blobStream.on("error", err => console.log(err));
 
     blobStream.on("finish", () => {
@@ -50,10 +50,10 @@ export const uploadByUser = async (req,res) => {
             image: publicUrl
         }));
     })
-    blobStream.end(req.file.buffer);
+    return blobStream.end(req.file.buffer);
 }
 
-export const getUploadedImageByIduser = async(req, res) => {
+export const getUploadedImageByUsername = async(req, res) => {
     const username = req.body.username;
     const images = await db.query(
         `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
@@ -62,12 +62,10 @@ export const getUploadedImageByIduser = async(req, res) => {
             raw: true,
         }
     );
-    if (images){
-        res.status(200).json(images);
-    } else {
-        res.status(200).json({ message: "No Images Uploaded"});
-    }
-    
+    if (images.length > null){
+        return res.status(200).json(images);
+    } 
+    return res.status(200).json({ message: "No Images Uploaded"}); 
 }
 
 
@@ -78,15 +76,22 @@ export const getImageByid = async(req, res) => {
            id : id
         }
     })
-    res.status(200).send(image);
+    if(image) {
+        return res.status(200).send(image);
+    }
+    return res.status(404).send({message: "Image not found"});
+    
 }
 
 export const getAllImgByUser = async(req, res) => {
     try{
         const image = await Images.findAll();
-        res.json(image);
+        if(image.length > 0){
+            return res.status(200).json(image);
+        }
+        return res.status(404).json({message: "No Images uploaded by user"});
     } catch (err) {
-        console.log(err);
+        return res.json(err);
     }
 }
 

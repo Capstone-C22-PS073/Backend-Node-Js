@@ -8,7 +8,7 @@ export const verifyToken = async( req, res, next) => {
     }
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
         if (err) return res.status(401).send({ 
-            message: "Token expired"
+            message: "Wrong Token or expired Token"
         });
         req.email = decoded.email;
         next();
