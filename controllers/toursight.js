@@ -1,5 +1,5 @@
 import Toursight from '../models/toursight-model.js';
-import { QueryTypes } from 'sequelize';
+import { Op, QueryTypes } from 'sequelize';
 import db from '../config/database.js';
 import dotenv from 'dotenv';
 import Multer from 'multer';
@@ -97,17 +97,37 @@ export const getToursightByid = async(req, res) => {
     return res.status(204).json({message: "Toursight id not found"});
 }
 
-export const searchToursightByName = async(req, res) => {
-    const search = req.query.keyword;
-    const toursight = await db.query(
-        `SELECT * FROM toursight WHERE name LIKE '%` + search + `%';`,
+
+export const searchToursightByKeyword = async(req, res) => {
+    const keyword = req.query.keyword;
+    const name = await db.query(
+        `SELECT * FROM toursight WHERE name LIKE '%` + keyword + `%';`,
         {
             type: QueryTypes.SELECT,
             raw: true,
         }
     );
-    if(toursight.length > 0){
-        return res.status(200).json(toursight);
+    const category = await db.query(
+        `SELECT * FROM toursight WHERE category LIKE '%` + keyword + `%';`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
+        }
+    );
+    const city = await db.query(
+        `SELECT * FROM toursight WHERE city LIKE '%` + keyword + `%';`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
+        }
+    )
+
+    if(name.length > 0){
+        return res.status(200).json(name);
+    } else if (category.length > 0){
+        return res.status(200).json(category);
+    } else if (city.length > 0){
+        return res.status(200).json(city);
     }
     return res.status(204).json({message: "Toursight name not found"});
 }
@@ -146,17 +166,16 @@ export const getDataByCategory = async(req, res ) => {
 export const getDatabyCity = async(req,res) => {
     const city = req.body.city;
     const toursight = await db.query(
-        `SELECT * FROM toursight WHERE city LIKE '%` + city + `%' &&` + `SELECT * FROM toursight WHERE city LIKE '%` + 'Indonesia' + `%';`,
+        `SELECT * FROM toursight WHERE city LIKE '%` + city + `%';`,
         {
             type: QueryTypes.SELECT,
             raw: true,
         }
     )
-
     if(toursight.length > 0){
         return res.status(200).json(toursight);
     }
-    return res.status(204).json({message: "No Data Found"});
+    return res.status(204).json({message: "No Toursight Found"});
 }
 
 

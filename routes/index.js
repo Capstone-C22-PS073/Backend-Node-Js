@@ -2,10 +2,10 @@ import { Router } from 'express';
 import { getUsers, Login, Register, Logout } from '../controllers/users.js';
 import { verifyToken } from '../middlewares/VerifyToken.js';
 import { refreshToken } from '../controllers/refreshToken.js';
-import { getAllToursight, getDataByCategory, getDatabyCity, getDataByClassName, getToursightByid, searchToursightByName, uploadDummy } from '../controllers/toursight.js';
+import { getAllToursight, getDataByCategory, getDatabyCity, getDataByClassName, getToursightByid, searchToursightByKeyword, uploadDummy } from '../controllers/toursight.js';
 // import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
 import { multer, getAllImgByUser, getImageByid, getUploadedImageByUsername, uploadByUser } from '../controllers/image.js';
-// import { getInfoByImg } from '../controllers/predict.js';
+
 
 
 
@@ -28,7 +28,7 @@ router.get('/users', getUsers);
 // Resource User
 router.get('/toursight', verifyToken, getAllToursight); //homepage setelah login tampilkan toursight
 router.get('/toursight/:id', verifyToken, getToursightByid); // menampilkan data berdasarkan id
-router.get('/search', verifyToken, searchToursightByName); // search toursight berdasarkan nama
+router.get('/search', verifyToken, searchToursightByKeyword); // search toursight berdasarkan nama
 router.get('/getdatabyimg', verifyToken, getDataByClassName); //search dengan menampilkan satu data dari classname
 router.get('/category', verifyToken, getDataByCategory);
 router.post('/image', verifyToken, multer.single('image'), uploadByUser);
