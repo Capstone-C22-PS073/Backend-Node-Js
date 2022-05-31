@@ -35,7 +35,7 @@ router.post('/image', verifyToken, multer.single('image'), uploadByUser);
 router.get('/image', verifyToken, getAllImgByUser);
 router.get('/image/:id', verifyToken, getImageByid);
 router.get('/imageuser', verifyToken, getUploadedImageByUsername);
-router.get('/city', getDatabyCity);
+router.get('/city', verifyToken, getDatabyCity);
 
 // Upload Image untuk temporary image recognition
 
