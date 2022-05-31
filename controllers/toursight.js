@@ -142,3 +142,23 @@ export const getDataByCategory = async(req, res ) => {
     }
     return res.status(204).json({message: "Category not found"});
 }
+
+export const getDatabyCity = async(req,res) => {
+    const city = req.body.city;
+    const toursight = await db.query(
+        `SELECT * FROM toursight WHERE city LIKE '%` + city + `%' &&` + `SELECT * FROM toursight WHERE city LIKE '%` + 'Indonesia' + `%';`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
+        }
+    )
+
+    if(toursight.length > 0){
+        return res.status(200).json(toursight);
+    }
+    return res.status(204).json({message: "No Data Found"});
+}
+
+
+    
+    // `SELECT * FROM toursight WHERE city LIKE '%` + city + `%'`:

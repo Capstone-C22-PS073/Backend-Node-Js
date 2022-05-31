@@ -12,7 +12,7 @@ const Toursight = db.define('toursight', {
     name:{
         type: DataTypes.STRING(100)
     },
-    location:{
+    city:{
         type: DataTypes.STRING(200),
     },
     category:{
@@ -26,7 +26,11 @@ const Toursight = db.define('toursight', {
     },
     history:{
         type: DataTypes.TEXT
+    },
+    location:{
+        type: DataTypes.TEXT
     }
+
 
 }, {
     freezeTableName: true,

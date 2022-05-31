@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { getUsers, Login, Register, Logout } from '../controllers/users.js';
 import { verifyToken } from '../middlewares/VerifyToken.js';
 import { refreshToken } from '../controllers/refreshToken.js';
-import { getAllToursight, getDataByCategory, getDataByClassName, getToursightByid, searchToursightByName, uploadDummy } from '../controllers/toursight.js';
+import { getAllToursight, getDataByCategory, getDatabyCity, getDataByClassName, getToursightByid, searchToursightByName, uploadDummy } from '../controllers/toursight.js';
 // import { uploadImg, uploadLoader } from '../middlewares/Multer.js';
 import { multer, getAllImgByUser, getImageByid, getUploadedImageByUsername, uploadByUser } from '../controllers/image.js';
 // import { getInfoByImg } from '../controllers/predict.js';
@@ -35,6 +35,7 @@ router.post('/image', verifyToken, multer.single('image'), uploadByUser);
 router.get('/image', verifyToken, getAllImgByUser);
 router.get('/image/:id', verifyToken, getImageByid);
 router.get('/imageuser', verifyToken, getUploadedImageByUsername);
+router.get('/city', getDatabyCity);
 
 // Upload Image untuk temporary image recognition
 
