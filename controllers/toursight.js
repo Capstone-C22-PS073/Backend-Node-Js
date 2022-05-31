@@ -9,10 +9,14 @@ dotenv.config()
 
 export const getAllToursight = async(req, res, next) => {
     try{
-        const toursight = await Toursight.findAll({
-            attributes: ['id', 'name', 'location', 'category', 'image', 'deskripsi'],
-            raw: true
-        });
+        const toursight = await db.query(
+            `SELECT * FROM toursight;`,
+            {
+                type: QueryTypes.SELECT,
+                raw: true,
+            }
+        );
+
         res.json(toursight);
     } catch (err) {
         console.log(err);
@@ -84,13 +88,17 @@ export const uploadDummy = async (req,res) => {
 //     console.log(toursight);
 // };
 
+
 export const getToursightByid = async(req, res) => {
     let id = req.params.id;
-    let toursight = await Toursight.findOne({
-        where: {
-           id : id
+    
+    const toursight = await db.query(
+        `SELECT * FROM toursight WHERE id = ${id};`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
         }
-    })
+    );
     if(toursight){
         return res.status(200).json(toursight);
     }

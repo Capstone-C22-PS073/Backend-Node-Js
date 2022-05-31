@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import Images from '../models/image.js';
 import db from '../config/database.js';
 import { QueryTypes } from 'sequelize';
-// import Users from '../models/user-model.js';
 
 dotenv.config()
 
@@ -34,12 +33,7 @@ export const uploadByUser = async (req,res) => {
     blobStream.on("error", err => console.log(err));
 
     blobStream.on("finish", () => {
-        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET}/${blob.name}`;
-        // res.json({ 
-        //     message: 'upload success',
-        //     data: publicUrl
-        // });
-        
+        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET}/${blob.name}`;    
         Images.create({
             uploadedBy: username,
             image: publicUrl
@@ -71,11 +65,18 @@ export const getUploadedImageByUsername = async(req, res) => {
 
 export const getImageByid = async(req, res) => {
     let id = req.params.id;
-    let image = await Images.findOne({
-        where: {
-           id : id
+    // let image = await Images.findOne({
+    //     where: {
+    //        id : id
+    //     }
+    // })
+    const image = await db.query(
+        `SELECT * FROM user_image WHERE id = ${id};`,
+        {
+            type: QueryTypes.SELECT,
+            raw: true,
         }
-    })
+    );
     if(image) {
         return res.status(200).send(image);
     }
@@ -85,7 +86,14 @@ export const getImageByid = async(req, res) => {
 
 export const getAllImgByUser = async(req, res) => {
     try{
-        const image = await Images.findAll();
+        // const image = await Images.findAll();
+        const image = await db.query(
+            `SELECT * FROM user_image;`,
+            {
+                type: QueryTypes.SELECT,
+                raw: true,
+            }
+        );
         if(image.length > 0){
             return res.status(200).json(image);
         }

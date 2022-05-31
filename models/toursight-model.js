@@ -15,6 +15,9 @@ const Toursight = db.define('toursight', {
     city:{
         type: DataTypes.STRING(200),
     },
+    location:{
+        type: DataTypes.TEXT
+    },
     category:{
         type: DataTypes.STRING(50)
     },
@@ -25,9 +28,6 @@ const Toursight = db.define('toursight', {
         type: DataTypes.TEXT
     },
     history:{
-        type: DataTypes.TEXT
-    },
-    location:{
         type: DataTypes.TEXT
     }
 

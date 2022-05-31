@@ -22,13 +22,12 @@ CREATE TABLE IF NOT EXISTS `toursight` (
 `id` INTEGER NOT NULL auto_increment , 
 `name` VARCHAR(100), 
 `city` VARCHAR(200), 
+`location` TEXT, 
 `category` VARCHAR(50), 
 `image` VARCHAR(255), 
 `deskripsi` TEXT, 
 `history` TEXT, 
-`location` TEXT, 
 PRIMARY KEY (`id`)) ENGINE=InnoDB;
-
 
 CREATE TABLE IF NOT EXISTS `user_image` (
 `id` INTEGER NOT NULL auto_increment , 
