@@ -54,11 +54,6 @@ app.get("/admin", (req,res) => {
 })
 
 app.use(`/api`, routes);
-app.use((error, req, res, next) => {
-    const message = `This is the unexpected field ->  "${error.field}" `;
-    console.log(message);
-    return res.status(500).json(message);
-})
 
 // static Image folder
 // app.use('/images', express.static('./images'));
