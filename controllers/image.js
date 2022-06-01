@@ -24,16 +24,16 @@ export const storage = new Storage({
 export const multer = Multer({
     storage: Multer.memoryStorage(),
     limits: { fileSize: '5 * 1024 * 1024'},
-    fileFilter: (req,file, cb) => {
-        const fileTypes = /jpeg|jpg|png|gif/;
-        const mimeType = fileTypes.test(file.mimetype);
-        const extname = fileTypes.test(path.extname(file.originalname));
+    // fileFilter: (req,file, cb) => {
+    //     const fileTypes = /jpeg|jpg|png|gif/;
+    //     const mimeType = fileTypes.test(file.mimetype);
+    //     const extname = fileTypes.test(path.extname(file.originalname));
   
-        if(mimeType && extname) {
-           return cb(null, true);
-        }
-        cb('Only jpg, jpeg, png, gif images are allowed'); 
-     },
+    //     if(mimeType && extname) {
+    //        return cb(null, true);
+    //     }
+    //     cb('Only jpg, jpeg, png, gif images are allowed'); 
+    //  },
 }).single('image');
 
 export const bucket = storage.bucket(process.env.GCS_BUCKET);
@@ -47,20 +47,22 @@ export const uploadByUser = async (req,res,cb) => {
 
     
     blobStream.on("error", err => console.log(err));
-
-    blobStream.on("finish", () => {
-        const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET}/${blob.name}`;    
-        Images.create({
-            uploadedBy: username,
-            image: publicUrl
-        })
-        .then(() => res.status(201).send({ 
-            message: 'Upload Success',
-            uploadedBy: username,
-            image: publicUrl
-        }));
-    })
-    return blobStream.end(req.file.buffer);
+    if (req.file.mimetype == "image/png" || req.file.mimetype == "image/jpg" || req.file.mimetype == "image/jpeg") {
+        blobStream.on("finish", () => {
+            const publicUrl = `https://storage.googleapis.com/${process.env.GCS_BUCKET}/${blob.name}`;    
+            Images.create({
+                uploadedBy: username,
+                image: publicUrl
+            })
+            .then(() => res.status(201).send({ 
+                message: 'Upload Success',
+                uploadedBy: username,
+                image: publicUrl
+            }));
+        }) } else {
+            res.status(405).json({message: "Only jpg, jpeg, and png images are allowed"});
+        }
+        return blobStream.end(req.file.buffer);
 }
 
 // export const getUploadedImageByUsername = async(req, res) => {
