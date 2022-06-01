@@ -53,8 +53,22 @@ export const uploadByUser = async (req,res) => {
     return blobStream.end(req.file.buffer);
 }
 
+// export const getUploadedImageByUsername = async(req, res) => {
+//     const username = req.body.username;
+//     const images = await db.query(
+//         `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
+//         {
+//             type: QueryTypes.SELECT,
+//             raw: true,
+//         }
+//     );
+//     if (images.length > null){
+//         return res.status(200).json(images);
+//     } 
+//     return res.status(204).json({ message: "No Images Uploaded"}); 
+// }
 export const getUploadedImageByUsername = async(req, res) => {
-    const username = req.body.username;
+    const username = req.query.username;
     const images = await db.query(
         `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
         {
