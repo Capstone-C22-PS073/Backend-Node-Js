@@ -38,14 +38,6 @@ CREATE TABLE IF NOT EXISTS `user_image` (
 PRIMARY KEY (`id`), 
 FOREIGN KEY (`uploadedBy`) REFERENCES `users` (`username`)) ENGINE=InnoDB;
 
--- CREATE TABLE IF NOT EXISTS `region` (
--- `id` INTEGER NOT NULL auto_increment , 
--- `city` VARCHAR(200) NOT NULL, 
--- PRIMARY KEY (`id`), 
--- FOREIGN KEY (`city`) REFERENCES `toursight` (`city`)) ENGINE=InnoDB;
-
---  Dummy Data (REPLACE DENGAN INSERT SAMA)
-
 REPLACE INTO `toursight` (`id`, `name`, `city`, `category`, `image`, `deskripsi`,`location`) VALUES
 (1, 'Monumen Nasional (Monas)', 'Jakarta', 'Landmark', 'https://storage.googleapis.com/toursight-dummydata/images/monas.jpg', 'Populer dengan nama Monas atau Tugu Monas, landmark Indonesia satu ini sudah lama menjadi ikon kebanggaan masyarakat Indonesia. Memiliki tinggi 132 meter, Landmark ini diprakarsai oleh presiden pertama Ir. Soekarno untuk mengenang perlawanan dan perjuangan rakyat Indonesia untuk merebut kemerdekaan.\r\nPembangunannya sendiri dimulai sejak 17 Agustus 1961 dan dibuka untuk umum pada tanggal 12 Juli 1975. Sejak saat itu, landmark Indonesia ini menjadi salah satu identitas dari Ibukota Jakarta. Ciri khas dari landmark ini adalah lapisan emas yang membentuk kobaran api pada puncak tugu megah ini.','https://goo.gl/maps/TffzuPvmSmTgj9Sp7'),
 (2, 'Tugu Jogja', 'Yogyakarta', 'Landmark', 'https://storage.googleapis.com/toursight-dummydata/images/tugujogja.jpg', 'Berlokasi di persimpangan Jalan Jenderal Sudirman dan Jalan Margo Utomo, Tugu Yogyakarta yang kerap disingkat menjadi Tugu Jogja ini telah lama menjadi salah satu ikon dari Kota Yogyakarta. \r\nNamun, landmark ikonik yang berdiri sekarang ternyata bukanlah tugu pertama yang berdiri di lokasi ini. Tugu yang berdiri kokoh sekarang ini dibangun oleh pemerintah Belanda setelah tugu sebelumnya yang bernama Tugu Golong-Gilig yang dibangun Hamengkubuwana I runtuh akibat gempa.\r\nSelain itu, tahukah kamu bahwa landmark populer ini tak hanya punya nilai sejarah namun juga magis? Tugu ini dibangun sebagai nilai simbolis dan merupakan garis yang bersifat magis menghubungkan laut selatan, kraton Jogja dan gunung Merapi.','https://goo.gl/maps/CTrSXfUZbkNhZCCaA'),
