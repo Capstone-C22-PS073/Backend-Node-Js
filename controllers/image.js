@@ -4,6 +4,11 @@ import dotenv from 'dotenv';
 import Images from '../models/image.js';
 import db from '../config/database.js';
 import { QueryTypes } from 'sequelize';
+import { v4 as uuidv4 } from 'uuid';
+// import { v4 } from 'uuid';
+
+// uuidv4();
+// const uuid = uuid.v1;
 
 dotenv.config()
 
@@ -26,7 +31,8 @@ export const bucket = storage.bucket(process.env.GCS_BUCKET);
 
 export const uploadByUser = async (req,res) => {
     const username = req.body.username
-    const newFileName = Date.now() + "-" + req.file.originalname;
+    // const newFileName = Date.now() + "-" + req.file.originalname;
+    const newFileName = uuidv4() + "-" + req.file.originalname;
     const blob = bucket.file(newFileName);
     const blobStream = blob.createWriteStream();
     
@@ -65,11 +71,6 @@ export const getUploadedImageByUsername = async(req, res) => {
 
 export const getImageByid = async(req, res) => {
     let id = req.params.id;
-    // let image = await Images.findOne({
-    //     where: {
-    //        id : id
-    //     }
-    // })
     const image = await db.query(
         `SELECT * FROM user_image WHERE id = ${id};`,
         {
