@@ -18,7 +18,7 @@ router.get('/token', verifyToken, refreshToken);
 router.delete('/logout', verifyToken, Logout);
 
 // Resource Admin
-router.post('/dummy', multer.single('image'), uploadDummy); // Upload Dummy Data 
+router.post('/dummy', multer, uploadDummy); // Upload Dummy Data 
 router.get('/users', getUsers);
 
 // router.post('/dummy', uploadImg, addToursight);
@@ -30,7 +30,7 @@ router.get('/toursight/:id', verifyToken, getToursightByid); // menampilkan data
 router.get('/search', verifyToken, searchToursightByKeyword); // search toursight berdasarkan nama
 router.get('/getdatabyimg', verifyToken, getDataByClassName); //search dengan menampilkan satu data dari classname
 router.get('/category', verifyToken, getDataByCategory);
-router.post('/image', verifyToken, multer.single('image'), uploadByUser);
+router.post('/image', verifyToken, multer, uploadByUser);
 router.get('/image', verifyToken, getAllImgByUser);
 router.get('/image/:id', verifyToken, getImageByid);
 router.get('/imageuser', verifyToken, getUploadedImageByUsername);

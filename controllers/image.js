@@ -5,6 +5,7 @@ import Images from '../models/image.js';
 import db from '../config/database.js';
 import { QueryTypes } from 'sequelize';
 import { v4 as uuidv4 } from 'uuid';
+import path from 'path';
 // import { v4 } from 'uuid';
 
 // uuidv4();
@@ -17,24 +18,33 @@ export const storage = new Storage({
     credentials: {
         client_email: process.env.GCLOUD_CLIENT_EMAIL,
         private_key: process.env.GCLOUD_PRIVATE_KEY,
-    }
+    },
 })
 
 export const multer = Multer({
     storage: Multer.memoryStorage(),
-    limits: { 
-        fileSize: '5 * 1024 * 1024'
-    }
-})
+    limits: { fileSize: '5 * 1024 * 1024'},
+    fileFilter: (req,file, cb) => {
+        const fileTypes = /jpeg|jpg|png|gif/;
+        const mimeType = fileTypes.test(file.mimetype);
+        const extname = fileTypes.test(path.extname(file.originalname));
+  
+        if(mimeType && extname) {
+           return cb(null, true);
+        }
+        cb('Only jpg, jpeg, png, gif images are allowed'); 
+     },
+}).single('image');
 
 export const bucket = storage.bucket(process.env.GCS_BUCKET);
 
-export const uploadByUser = async (req,res) => {
+export const uploadByUser = async (req,res,cb) => {
     const username = req.body.username
     // const newFileName = Date.now() + "-" + req.file.originalname;
     const newFileName = uuidv4() + "-" + req.file.originalname;
     const blob = bucket.file(newFileName);
     const blobStream = blob.createWriteStream();
+
     
     blobStream.on("error", err => console.log(err));
 
@@ -96,7 +106,6 @@ export const getImageByid = async(req, res) => {
         return res.status(200).send(image);
     }
     return res.status(204).send({message: "Image not found"});
-    
 }
 
 export const getAllImgByUser = async(req, res) => {
