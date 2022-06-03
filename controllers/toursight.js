@@ -197,5 +197,6 @@ export const getDatabyCity = async(req,res) => {
 }
 
 
-    
+
+
     // `SELECT * FROM toursight WHERE city LIKE '%` + city + `%'`:

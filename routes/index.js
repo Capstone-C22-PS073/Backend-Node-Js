@@ -23,7 +23,6 @@ router.get('/users', getUsers);
 
 // router.post('/dummy', uploadImg, addToursight);
 
-
 // Resource User
 router.get('/toursight', verifyToken, getAllToursight); //homepage setelah login tampilkan toursight
 router.get('/toursight/:id', verifyToken, getToursightByid); // menampilkan data berdasarkan id
