@@ -3,7 +3,7 @@ import db from '../config/database.js';
 import Users from './user-model.js';
 
 
-const Images = db.define('user_image', {
+const Images = db.define('users_image', {
     id:{
        allowNull: false,
        autoIncrement: true,

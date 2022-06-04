@@ -72,7 +72,7 @@ export const uploadByUser = async (req,res,cb) => {
 export const getUploadedImageByUsername = async(req, res) => {
     const username = req.query.username;
     const images = await db.query(
-        `SELECT * FROM user_image WHERE uploadedBy ='` + username + `';`,
+        `SELECT * FROM users_image WHERE uploadedBy ='` + username + `';`,
         {
             type: QueryTypes.SELECT,
             raw: true,
@@ -88,7 +88,7 @@ export const getUploadedImageByUsername = async(req, res) => {
 export const getImageByid = async(req, res) => {
     let id = req.params.id;
     const image = await db.query(
-        `SELECT * FROM user_image WHERE id = ${id};`,
+        `SELECT * FROM users_image WHERE id = ${id};`,
         {
             type: QueryTypes.SELECT,
             raw: true,
@@ -104,7 +104,7 @@ export const getAllImgByUser = async(req, res) => {
     try{
         // const image = await Images.findAll();
         const image = await db.query(
-            `SELECT * FROM user_image;`,
+            `SELECT * FROM users_image;`,
             {
                 type: QueryTypes.SELECT,
                 raw: true,
