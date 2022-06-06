@@ -1,6 +1,7 @@
 # Endpoint Documentation
 
-Documentation can be seen by using Postman application the import /postman/Toursight.postman_collection.json to postman to see full documentation
+Documentation can be seen by using Postman application.
+Import /postman/Toursight.postman_collection.json to postman to see full documentation
 
 **Base URL :**
 > https://belajarteknologi.space/
