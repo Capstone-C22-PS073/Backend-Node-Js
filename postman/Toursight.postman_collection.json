@@ -66,12 +66,12 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "user1",
+									"value": "user",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "user1@gmail.com",
+									"value": "user2@gmail.com",
 									"type": "text"
 								},
 								{
@@ -163,7 +163,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzODE2LCJleHAiOjE2NTQwMTU2MTZ9.lhlih8sih_pkWkBhcqakm9LrxyvfY-yNGy4XgGbSjww",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -175,7 +175,7 @@
 							"urlencoded": [
 								{
 									"key": "city",
-									"value": "yogyakarta",
+									"value": "jakarta",
 									"type": "text"
 								}
 							]
@@ -200,7 +200,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -227,7 +227,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -255,7 +255,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -263,7 +263,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server}}/search?keyword=jakarta",
+							"raw": "{{server}}/search?keyword=bandung",
 							"host": [
 								"{{server}}"
 							],
@@ -273,7 +273,7 @@
 							"query": [
 								{
 									"key": "keyword",
-									"value": "jakarta"
+									"value": "bandung"
 								}
 							]
 						}
@@ -288,7 +288,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -324,7 +324,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -368,7 +368,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -413,7 +413,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -426,12 +426,13 @@
 								{
 									"key": "username",
 									"value": "user1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "{{server}}/imageuser",
+							"raw": "{{server}}/imageuser?username=testing",
 							"host": [
 								"{{server}}"
 							],
@@ -441,8 +442,7 @@
 							"query": [
 								{
 									"key": "username",
-									"value": "tante",
-									"disabled": true
+									"value": "testing"
 								}
 							]
 						}
@@ -457,7 +457,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -484,7 +484,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzNTM1LCJleHAiOjE2NTQwMTUzMzV9.UTuGJ3WbBcsBdQLP5fuFI-xREfZFliRm9f9xYt8hM-g",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -593,12 +593,12 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "test2",
+									"value": "coba",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "test2@gmail.com",
+									"value": "coba@gmail.com",
 									"type": "text"
 								},
 								{
@@ -630,7 +630,7 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "test2@gmail.com",
+									"value": "coba@gmail.com",
 									"type": "text"
 								},
 								{
@@ -660,7 +660,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjUzOTE2MTg0LCJleHAiOjE2NTM5MTc5ODR9.ZcFBaF1eUcN7KomDrnOG6jGrC2CHA42ErzHZ9qEVcqM",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -693,7 +693,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzODE2LCJleHAiOjE2NTQwMTU2MTZ9.lhlih8sih_pkWkBhcqakm9LrxyvfY-yNGy4XgGbSjww",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -730,7 +730,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEyMjY2LCJleHAiOjE2NTQwMTQwNjZ9.R5Z3IZqXhV6KjjGkGKelrPj2Fpc9lSyZ1eo0vYsT120",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -757,7 +757,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEyMjY2LCJleHAiOjE2NTQwMTQwNjZ9.R5Z3IZqXhV6KjjGkGKelrPj2Fpc9lSyZ1eo0vYsT120",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -785,7 +785,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDA4MzMyLCJleHAiOjE2NTQwMTAxMzJ9.qxqUvMoeonTgk7CnEaJwKPrQldGC8EouEKy7W-kyo7I",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -818,7 +818,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjUzOTE1MjgyLCJleHAiOjE2NTM5MTcwODJ9.WvsliUhSVmYa8Yl24EaXOwd9f8BN1TbXsnNwQuKJf3w",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -826,7 +826,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{lokal}}/category?category=food",
+							"raw": "{{lokal}}/category?category=culture",
 							"host": [
 								"{{lokal}}"
 							],
@@ -836,7 +836,7 @@
 							"query": [
 								{
 									"key": "category",
-									"value": "food"
+									"value": "culture"
 								}
 							]
 						}
@@ -854,7 +854,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjUzOTE1MjgyLCJleHAiOjE2NTM5MTcwODJ9.WvsliUhSVmYa8Yl24EaXOwd9f8BN1TbXsnNwQuKJf3w",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -866,7 +866,7 @@
 							"urlencoded": [
 								{
 									"key": "classname",
-									"value": "monumen nasional",
+									"value": "tempe goreng",
 									"type": "text"
 								}
 							]
@@ -898,7 +898,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEyMjY2LCJleHAiOjE2NTQwMTQwNjZ9.R5Z3IZqXhV6KjjGkGKelrPj2Fpc9lSyZ1eo0vYsT120",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -910,13 +910,13 @@
 							"formdata": [
 								{
 									"key": "username",
-									"value": "test2",
+									"value": "test1",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/Aldo/Pictures/bg.jpg"
+									"src": "/C:/Users/Aldo/Pictures/pizza.jpg"
 								}
 							]
 						},
@@ -940,7 +940,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzMTI2LCJleHAiOjE2NTQwMTQ5MjZ9.m-wN26fmIN3UNoC4wNSm2uazTI3bbAWEZJwzeQwVReU",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -970,7 +970,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjU0MDEzMTI2LCJleHAiOjE2NTQwMTQ5MjZ9.m-wN26fmIN3UNoC4wNSm2uazTI3bbAWEZJwzeQwVReU",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -981,19 +981,26 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "username",
-									"value": "test2",
-									"type": "text"
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "{{lokal}}/imageuser",
+							"raw": "{{lokal}}/imageuser?username=test1",
 							"host": [
 								"{{lokal}}"
 							],
 							"path": [
 								"imageuser"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "test1"
+								}
 							]
 						}
 					},
@@ -1007,7 +1014,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjUzOTE1MjgyLCJleHAiOjE2NTM5MTcwODJ9.WvsliUhSVmYa8Yl24EaXOwd9f8BN1TbXsnNwQuKJf3w",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -1015,13 +1022,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{lokal}}/image/2",
+							"raw": "{{lokal}}/image/1",
 							"host": [
 								"{{lokal}}"
 							],
 							"path": [
 								"image",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -1035,7 +1042,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0ZXN0MiIsImVtYWlsIjoidGVzdDJAZ21haWwuY29tIiwiaWF0IjoxNjUzOTE1Mzk0LCJleHAiOjE2NTM5MTcxOTR9.67anlzqHRFC7NtN0VrvRGcqbIcXF_PRJNGk_jiSAUts",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
@@ -1117,12 +1124,17 @@
 	"variable": [
 		{
 			"key": "lokal",
-			"value": "http://localhost:8080/api",
+			"value": "localhost:8080/api",
 			"type": "string"
 		},
 		{
 			"key": "server",
 			"value": "https://belajarteknologi.space/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwiaWF0IjoxNjU0NDQ3MTQxLCJleHAiOjE2NTQ0NDg5NDF9.tkW-luLGN5hrZUaFsw54WKpfWfu9Av75TouR5yJDkAc",
 			"type": "string"
 		}
 	]

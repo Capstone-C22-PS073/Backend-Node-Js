@@ -1,4 +1,15 @@
-# Tutorial using Backend (Node JS)
+# Endpoint Documentation
+
+Documentation can be seen by using Postman application the import /postman/Toursight.postman_collection.json to postman to see full documentation
+
+**Base URL :**
+> https://belajarteknologi.space/
+
+See all Toursight users
+> https://belajarteknologi.space/users
+
+
+# How to use API (Node JS)
 
 requirements
 * Node js 
@@ -22,6 +33,3 @@ How to run in server production / server :
 1. git clone https://github.com/Capstone-X/Backend-Nodejs.git
 2. npm install 
 3. npm run prod
-
-
-
