@@ -12,13 +12,13 @@ See all Toursight users
 
 # How to use Backend 
 
-requirements
+Requirements
 * Node js 
 * Text editor
 * CLI 
 * XAMPP (for database local)
 
-create database first on xampp (local)
+Create database first on xampp (local)
 1. turn on XAMPP
 2. start apache and MySQL
 3. click on MySQL admin or go to http://localhost/phpmyadmin/
