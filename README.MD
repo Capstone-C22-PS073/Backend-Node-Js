@@ -7,7 +7,7 @@ Import /postman/Toursight.postman_collection.json to postman to see full documen
 > https://belajarteknologi.space/
 
 See all Toursight users
-> https://belajarteknologi.space/users
+> https://belajarteknologi.space/api/users
 
 
 # How to use Backend 
