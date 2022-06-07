@@ -1,7 +1,7 @@
 # Endpoint Documentation
 
 Documentation can be seen by using Postman application.
-Import /postman/Toursight.postman_collection.json to postman to see full documentation
+Import ./postman/Toursight.postman_collection.json to postman to see full documentation
 
 **Base URL :**
 > https://belajarteknologi.space/
@@ -33,4 +33,4 @@ How to run backend in local / development:
 How to run in server production / server :
 1. git clone https://github.com/Capstone-X/Backend-Nodejs.git
 2. npm install 
-3. npm run prod
+3. npm run server
