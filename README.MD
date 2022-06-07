@@ -10,7 +10,7 @@ See all Toursight users
 > https://belajarteknologi.space/api/users
 
 
-# How to use Backend 
+# How to use 
 
 Requirements
 * Node js 
